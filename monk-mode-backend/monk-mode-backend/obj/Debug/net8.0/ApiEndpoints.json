@@ -40,5 +40,84 @@
         "StatusCode": 400
       }
     ]
+  },
+  {
+    "ContainingType": "monk_mode_backend.Controllers.TimeBlockController",
+    "Method": "CreateTimeBlock",
+    "RelativePath": "api/TimeBlock",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "timeBlockData",
+        "Type": "monk_mode_backend.Models.TimeBlockDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "monk_mode_backend.Controllers.TimeBlockController",
+    "Method": "GetAllTimeBlocks",
+    "RelativePath": "api/TimeBlock",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "monk_mode_backend.Controllers.TimeBlockController",
+    "Method": "GetTimeBlockById",
+    "RelativePath": "api/TimeBlock/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "monk_mode_backend.Controllers.TimeBlockController",
+    "Method": "UpdateTimeBlock",
+    "RelativePath": "api/TimeBlock/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "timeBlockData",
+        "Type": "monk_mode_backend.Models.TimeBlockDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "monk_mode_backend.Controllers.TimeBlockController",
+    "Method": "DeleteTimeBlock",
+    "RelativePath": "api/TimeBlock/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

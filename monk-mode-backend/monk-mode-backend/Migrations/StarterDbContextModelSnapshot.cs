@@ -10,7 +10,7 @@ using monk_mode_backend.Infrastructure;
 
 namespace monk_mode_backend.Migrations
 {
-    [DbContext(typeof(StarterDbContext))]
+    [DbContext(typeof(Infrastructure.MonkModeDbContext))]
     partial class StarterDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

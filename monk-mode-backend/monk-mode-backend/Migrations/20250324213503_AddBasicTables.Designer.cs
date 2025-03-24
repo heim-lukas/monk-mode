@@ -11,7 +11,7 @@ using monk_mode_backend.Infrastructure;
 
 namespace monk_mode_backend.Migrations
 {
-    [DbContext(typeof(StarterDbContext))]
+    [DbContext(typeof(Infrastructure.MonkModeDbContext))]
     [Migration("20250324213503_AddBasicTables")]
     partial class AddBasicTables
     {

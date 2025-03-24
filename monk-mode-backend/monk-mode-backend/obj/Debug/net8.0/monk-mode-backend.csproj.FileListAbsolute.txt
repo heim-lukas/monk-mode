@@ -123,3 +123,4 @@ C:\Users\Lukas\Documents\01_Projects\monk-mode\monk-mode-backend\monk-mode-backe
 C:\Users\Lukas\Documents\01_Projects\monk-mode\monk-mode-backend\monk-mode-backend\obj\Debug\net8.0\monk-mode-backend.pdb
 C:\Users\Lukas\Documents\01_Projects\monk-mode\monk-mode-backend\monk-mode-backend\obj\Debug\net8.0\monk-mode-backend.genruntimeconfig.cache
 C:\Users\Lukas\Documents\01_Projects\monk-mode\monk-mode-backend\monk-mode-backend\obj\Debug\net8.0\ref\monk-mode-backend.dll
+C:\Users\Lukas\Documents\01_Projects\monk-mode\monk-mode-backend\monk-mode-backend\bin\Debug\net8.0\AutoMapper.dll

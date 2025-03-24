@@ -45,16 +45,15 @@ namespace monk_mode_backend.Controllers {
 
             foreach (var er in result.Errors) {
                 Console.WriteLine(er);
-
             }
 
             if (!result.Succeeded)
                 return StatusCode(StatusCodes.Status400BadRequest, new ResponseDTO { Status = "Error", Message = "User creation failed! Please check user details and try again." });
 
-            await userManager.AddToRoleAsync(user, "User");
+            // Currently no roles needed
+            //await userManager.AddToRoleAsync(user, "User");
 
             return Ok(new ResponseDTO { Status = "Success", Message = "User created successfully!" });
         }
-
     }
 }
