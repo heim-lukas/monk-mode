@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import { Tasks } from "./tasks";
 import { Profile } from "./profile";
 import { Friends } from "./friends";
+import { NotFound } from "./not-found";
 
 function DashboardHome() {
   return (
@@ -14,7 +15,7 @@ function DashboardHome() {
           <CardTitle>Welcome to MonkMode</CardTitle>
         </CardHeader>
         <CardContent>
-          <p>Select a section from the sidebar to get started</p>
+          <p>Insert timeblock here</p>
         </CardContent>
       </Card>
     </div>
@@ -32,6 +33,7 @@ export function Dashboard() {
           <Route path="/tasks" element={<Tasks />} />
           <Route path="/friends" element={<Friends />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
     </SidebarProvider>

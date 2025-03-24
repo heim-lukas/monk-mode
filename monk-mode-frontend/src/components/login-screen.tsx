@@ -9,16 +9,35 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { useNavigate, Link } from "react-router-dom";
+import { login } from "@/services/api";
 
 export function LoginScreen() {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
-  const handleLogin = (e: React.FormEvent) => {
-    // TODO: Implement login logic
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    navigate("/dashboard");
+    setError("");
+    setIsLoading(true);
+
+    try {
+      const response = await login({ username, password });
+      // Store the token in localStorage or a secure storage
+      localStorage.setItem("token", response.token);
+      navigate("/dashboard");
+    } catch (err) {
+      console.error("Login error:", err);
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError("An unexpected error occurred. Please try again.");
+      }
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -33,15 +52,15 @@ export function LoginScreen() {
         <CardContent>
           <form onSubmit={handleLogin} className="space-y-4">
             <div className="space-y-2">
-              <label htmlFor="email" className="text-sm font-medium">
-                Email
+              <label htmlFor="username" className="text-sm font-medium">
+                Username
               </label>
               <Input
-                id="email"
-                type="email"
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                id="username"
+                type="text"
+                placeholder="Enter your username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
                 required
               />
             </div>
@@ -58,8 +77,11 @@ export function LoginScreen() {
                 required
               />
             </div>
-            <Button type="submit" className="w-full">
-              Login
+            {error && (
+              <div className="text-sm text-red-500 text-center">{error}</div>
+            )}
+            <Button type="submit" className="w-full" disabled={isLoading}>
+              {isLoading ? "Logging in..." : "Login"}
             </Button>
             <div className="text-center text-sm">
               Don't have an account?{" "}

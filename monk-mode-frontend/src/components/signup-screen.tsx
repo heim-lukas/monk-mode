@@ -9,17 +9,35 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { useNavigate, Link } from "react-router-dom";
+import { register } from "@/services/api";
 
 export function SignUpScreen() {
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
+  const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
-  const handleSignUp = (e: React.FormEvent) => {
+  const handleSignUp = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Implement sign up logic
-    navigate("/dashboard");
+    setError("");
+    setIsLoading(true);
+
+    try {
+      await register({ username, email, password });
+      // Registration successful, redirect to login
+      navigate("/login");
+    } catch (err) {
+      console.error("Registration error:", err);
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError("An unexpected error occurred. Please try again.");
+      }
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -34,15 +52,15 @@ export function SignUpScreen() {
         <CardContent>
           <form onSubmit={handleSignUp} className="space-y-4">
             <div className="space-y-2">
-              <label htmlFor="name" className="text-sm font-medium">
-                Name
+              <label htmlFor="username" className="text-sm font-medium">
+                Username
               </label>
               <Input
-                id="name"
+                id="username"
                 type="text"
-                placeholder="Enter your name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                placeholder="Enter your username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
                 required
               />
             </div>
@@ -72,8 +90,11 @@ export function SignUpScreen() {
                 required
               />
             </div>
-            <Button type="submit" className="w-full">
-              Sign Up
+            {error && (
+              <div className="text-sm text-red-500 text-center">{error}</div>
+            )}
+            <Button type="submit" className="w-full" disabled={isLoading}>
+              {isLoading ? "Creating account..." : "Sign Up"}
             </Button>
             <div className="text-center text-sm">
               Already have an account?{" "}

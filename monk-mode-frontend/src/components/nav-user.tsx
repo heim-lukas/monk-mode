@@ -18,7 +18,7 @@ export function NavUser() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // TODO: Implement logout logic
+    localStorage.removeItem("token");
     navigate("/login");
   };
 

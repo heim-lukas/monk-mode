@@ -76,6 +76,16 @@ builder.Services.AddSwaggerGen(opt =>
 
 builder.Services.AddScoped<ITokenService, JWTService>();
 
+// Enable CORS
+builder.Services.AddCors(options => {
+    options.AddPolicy("AllowReactApp",
+        policy => policy
+            .WithOrigins("http://localhost:5173") // Your React app's origin
+            .AllowAnyMethod() // Allows all HTTP methods (GET, POST, etc.)
+            .AllowAnyHeader() // Allows all headers
+            .AllowCredentials()); // Allows credentials (cookies, authorization headers)
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -84,6 +94,7 @@ if (app.Environment.IsDevelopment()) {
     app.UseSwaggerUI();
 }
 
+app.UseCors("AllowReactApp");
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();

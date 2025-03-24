@@ -25,7 +25,12 @@ namespace monk_mode_backend.Controllers {
             if (user != null && await userManager.CheckPasswordAsync(user, model.Password)) {
                 return Ok(await tokenService.CreateTokenAsync(user));
             }
-            return Unauthorized();
+
+            var failedResponse = new ResponseDTO {
+                Status = "Error",
+                Message = "Invalid credentials! Please check your username and password."
+            };
+            return Unauthorized(failedResponse); // Return error message when login fails
         }
 
         [HttpPost]
