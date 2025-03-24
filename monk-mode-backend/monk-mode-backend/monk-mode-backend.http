@@ -1,0 +1,6 @@
+@monk_mode_backend_HostAddress = http://localhost:5286
+
+GET {{monk_mode_backend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
