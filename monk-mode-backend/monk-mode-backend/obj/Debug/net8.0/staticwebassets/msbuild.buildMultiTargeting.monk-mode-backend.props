@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\monk-mode-backend.props" />
+</Project>

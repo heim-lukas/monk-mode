@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("monk-mode-backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd8e4f8e417f4d8120c7d5f2a150bd70f66e6d2e")]
 [assembly: System.Reflection.AssemblyProductAttribute("monk-mode-backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("monk-mode-backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
