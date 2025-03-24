@@ -6,6 +6,7 @@ import {
   Search,
   Settings,
   UserRound,
+  UsersRound,
 } from "lucide-react";
 
 import {
@@ -35,6 +36,11 @@ const items = [
     icon: ListChecks,
   },
   {
+    title: "Friends",
+    url: "/dashboard/friends",
+    icon: UsersRound,
+  },
+  {
     title: "Profile",
     url: "/dashboard/profile",
     icon: UserRound,
@@ -46,7 +52,6 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>MonkMode</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (

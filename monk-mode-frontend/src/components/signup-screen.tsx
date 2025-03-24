@@ -10,13 +10,15 @@ import {
 } from "@/components/ui/card";
 import { useNavigate, Link } from "react-router-dom";
 
-export function LoginScreen() {
+export function SignUpScreen() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleSignUp = (e: React.FormEvent) => {
     e.preventDefault();
+    // Mock sign up - just navigate to dashboard
     navigate("/dashboard");
   };
 
@@ -24,13 +26,26 @@ export function LoginScreen() {
     <div className="min-h-screen flex items-center justify-center bg-background">
       <Card className="w-[350px]">
         <CardHeader>
-          <CardTitle>Welcome to MonkMode</CardTitle>
+          <CardTitle>Create an Account</CardTitle>
           <CardDescription>
-            Enter your credentials to access your dashboard
+            Enter your details to create your account
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <form onSubmit={handleLogin} className="space-y-4">
+          <form onSubmit={handleSignUp} className="space-y-4">
+            <div className="space-y-2">
+              <label htmlFor="name" className="text-sm font-medium">
+                Name
+              </label>
+              <Input
+                id="name"
+                type="text"
+                placeholder="Enter your name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+            </div>
             <div className="space-y-2">
               <label htmlFor="email" className="text-sm font-medium">
                 Email
@@ -51,19 +66,19 @@ export function LoginScreen() {
               <Input
                 id="password"
                 type="password"
-                placeholder="Enter your password"
+                placeholder="Create a password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
             </div>
             <Button type="submit" className="w-full">
-              Login
+              Sign Up
             </Button>
             <div className="text-center text-sm">
-              Don't have an account?{" "}
-              <Link to="/signup" className="text-primary hover:underline">
-                Sign up
+              Already have an account?{" "}
+              <Link to="/login" className="text-primary hover:underline">
+                Login
               </Link>
             </div>
           </form>

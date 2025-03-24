@@ -4,6 +4,7 @@ import { AppSidebar } from "./app-sidebar";
 import { Routes, Route } from "react-router-dom";
 import { Tasks } from "./tasks";
 import { Profile } from "./profile";
+import { Friends } from "./friends";
 
 function DashboardHome() {
   return (
@@ -29,6 +30,7 @@ export function Dashboard() {
         <Routes>
           <Route path="/" element={<DashboardHome />} />
           <Route path="/tasks" element={<Tasks />} />
+          <Route path="/friends" element={<Friends />} />
           <Route path="/profile" element={<Profile />} />
         </Routes>
       </main>
