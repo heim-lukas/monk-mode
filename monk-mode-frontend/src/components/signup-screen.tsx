@@ -18,7 +18,7 @@ export function SignUpScreen() {
 
   const handleSignUp = (e: React.FormEvent) => {
     e.preventDefault();
-    // Mock sign up - just navigate to dashboard
+    // TODO: Implement sign up logic
     navigate("/dashboard");
   };
 

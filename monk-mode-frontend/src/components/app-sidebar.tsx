@@ -1,13 +1,4 @@
-import {
-  Calendar,
-  Home,
-  Inbox,
-  ListChecks,
-  Search,
-  Settings,
-  UserRound,
-  UsersRound,
-} from "lucide-react";
+import { Home, ListChecks, UserRound, UsersRound } from "lucide-react";
 
 import {
   Sidebar,
@@ -15,7 +6,6 @@ import {
   SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
-  SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
@@ -23,7 +13,7 @@ import {
 import { Link } from "react-router-dom";
 import { NavUser } from "./nav-user";
 
-// Menu items.
+// Menu items
 const items = [
   {
     title: "Home",

@@ -16,6 +16,7 @@ export function LoginScreen() {
   const navigate = useNavigate();
 
   const handleLogin = (e: React.FormEvent) => {
+    // TODO: Implement login logic
     e.preventDefault();
     navigate("/dashboard");
   };

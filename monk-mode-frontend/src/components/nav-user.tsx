@@ -18,7 +18,7 @@ export function NavUser() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // Here you would typically clear any auth state/tokens
+    // TODO: Implement logout logic
     navigate("/login");
   };
 
