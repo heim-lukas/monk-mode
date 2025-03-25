@@ -1,3 +1,5 @@
+import { API_BASE_URL } from "@/config/api";
+
 interface LoginRequest {
   username: string;
   password: string;
@@ -20,17 +22,14 @@ interface ErrorResponse {
 
 export async function login(credentials: LoginRequest): Promise<LoginResponse> {
   try {
-    const response = await fetch(
-      "https://localhost:7153/api/Authenticate/login",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(credentials),
-      }
-    );
+    const response = await fetch(`${API_BASE_URL}/Authenticate/login`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(credentials),
+    });
 
     if (!response.ok) {
       const errorData = await response.text();
@@ -47,17 +46,14 @@ export async function login(credentials: LoginRequest): Promise<LoginResponse> {
 
 export async function register(data: RegisterRequest): Promise<LoginResponse> {
   try {
-    const response = await fetch(
-      "https://localhost:7153/api/Authenticate/register",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(data),
-      }
-    );
+    const response = await fetch(`${API_BASE_URL}/Authenticate/register`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(data),
+    });
 
     if (!response.ok) {
       const errorData = await response.text();
