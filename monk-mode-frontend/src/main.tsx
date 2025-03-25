@@ -1,13 +1,13 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
 import "./index.css";
-import App from "./App.tsx";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/providers";
 
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <ThemeProvider defaultTheme="dark" storageKey="monk-mode-theme">
       <App />
     </ThemeProvider>
-  </StrictMode>
+  </React.StrictMode>
 );

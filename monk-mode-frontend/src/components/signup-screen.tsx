@@ -9,7 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { useNavigate, Link } from "react-router-dom";
-import { register } from "@/services/api";
+import { register } from "@/services";
 
 export function SignUpScreen() {
   const [username, setUsername] = useState("");

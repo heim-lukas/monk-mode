@@ -1,0 +1,3 @@
+# Ignore appsettings.json and other config files
+/appsettings.json
+/appsettings.*.json

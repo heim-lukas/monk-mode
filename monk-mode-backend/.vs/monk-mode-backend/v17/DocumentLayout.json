@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\controllers\\timeblockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\controllers\\timeblockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\controllers\\authenticatecontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\controllers\\authenticatecontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,19 +31,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "TimeBlockController.cs",
+              "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Controllers\\TimeBlockController.cs",
+              "RelativeDocumentMoniker": "monk-mode-backend\\Controllers\\TimeBlockController.cs",
+              "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Controllers\\TimeBlockController.cs",
+              "RelativeToolTip": "monk-mode-backend\\Controllers\\TimeBlockController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T10:19:30.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\appsettings.json",
+              "RelativeDocumentMoniker": "monk-mode-backend\\appsettings.json",
+              "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\appsettings.json",
+              "RelativeToolTip": "monk-mode-backend\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-24T23:26:27.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "AuthenticateControllers.cs",
               "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Controllers\\AuthenticateControllers.cs",
               "RelativeDocumentMoniker": "monk-mode-backend\\Controllers\\AuthenticateControllers.cs",
               "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Controllers\\AuthenticateControllers.cs",
               "RelativeToolTip": "monk-mode-backend\\Controllers\\AuthenticateControllers.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwBsAAAAAAAAA",
+              "ViewState": "AQIAABoAAAAAAAAAAAAAwBsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-24T22:47:25.45Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Program.cs",
               "RelativeDocumentMoniker": "monk-mode-backend\\Program.cs",
@@ -43,8 +77,7 @@
               "RelativeToolTip": "monk-mode-backend\\Program.cs",
               "ViewState": "AQIAAE8AAAAAAAAAAAAgwFgAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T22:28:55.125Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T22:28:55.125Z"
             }
           ]
         }
