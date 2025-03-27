@@ -46,8 +46,7 @@
               "RelativeToolTip": "monk-mode-backend\\Application\\Mappings\\MappingProfile.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T10:45:39.498Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T10:45:39.498Z"
             },
             {
               "$type": "Document",
@@ -59,8 +58,7 @@
               "RelativeToolTip": "monk-mode-backend\\Domain\\Task.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAAwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T10:44:58.07Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T10:44:58.07Z"
             },
             {
               "$type": "Document",
@@ -72,8 +70,7 @@
               "RelativeToolTip": "monk-mode-backend\\Controllers\\TimeBlockController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T10:19:30.933Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T10:19:30.933Z"
             },
             {
               "$type": "Document",
@@ -110,8 +107,7 @@
               "RelativeToolTip": "monk-mode-backend\\Program.cs",
               "ViewState": "AQIAAE8AAAAAAAAAAAAgwFgAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T22:28:55.125Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T22:28:55.125Z"
             }
           ]
         }
