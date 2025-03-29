@@ -10,6 +10,6 @@
 
         public ApplicationUser User { get; set; } = null!;
 
-        public ICollection<Task> Tasks { get; set; } = new List<Task>();
+        public ICollection<UserTask> Tasks { get; set; } = new List<UserTask>();
     }
 }

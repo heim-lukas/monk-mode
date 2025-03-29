@@ -10,7 +10,7 @@ using monk_mode_backend.Infrastructure;
 
 namespace monk_mode_backend.Migrations
 {
-    [DbContext(typeof(Infrastructure.MonkModeDbContext))]
+    [DbContext(typeof(MonkModeDbContext))]
     partial class StarterDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
@@ -257,46 +257,6 @@ namespace monk_mode_backend.Migrations
                     b.ToTable("Friendships");
                 });
 
-            modelBuilder.Entity("monk_mode_backend.Domain.Task", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime?>("CompletedAt")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<DateTime>("DueDate")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<bool>("IsCompleted")
-                        .HasColumnType("tinyint(1)");
-
-                    b.Property<int?>("TimeBlockId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("varchar(255)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("TimeBlockId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Tasks");
-                });
-
             modelBuilder.Entity("monk_mode_backend.Domain.TimeBlock", b =>
                 {
                     b.Property<int>("Id")
@@ -330,6 +290,49 @@ namespace monk_mode_backend.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("TimeBlocks");
+                });
+
+            modelBuilder.Entity("monk_mode_backend.Domain.UserTask", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime?>("CompletedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTime?>("DueDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<bool>("IsCompleted")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<int?>("TimeBlockId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TimeBlockId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Tasks");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -394,7 +397,18 @@ namespace monk_mode_backend.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("monk_mode_backend.Domain.Task", b =>
+            modelBuilder.Entity("monk_mode_backend.Domain.TimeBlock", b =>
+                {
+                    b.HasOne("monk_mode_backend.Domain.ApplicationUser", "User")
+                        .WithMany("TimeBlocks")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("monk_mode_backend.Domain.UserTask", b =>
                 {
                     b.HasOne("monk_mode_backend.Domain.TimeBlock", "TimeBlock")
                         .WithMany("Tasks")
@@ -407,17 +421,6 @@ namespace monk_mode_backend.Migrations
                         .IsRequired();
 
                     b.Navigation("TimeBlock");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("monk_mode_backend.Domain.TimeBlock", b =>
-                {
-                    b.HasOne("monk_mode_backend.Domain.ApplicationUser", "User")
-                        .WithMany("TimeBlocks")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
 
                     b.Navigation("User");
                 });

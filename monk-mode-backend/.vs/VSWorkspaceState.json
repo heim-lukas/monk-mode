@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\monk-mode-backend",
+    "\\monk-mode-backend\\bin",
+    "\\monk-mode-backend\\Controllers",
+    "\\monk-mode-backend\\Domain",
+    "\\monk-mode-backend\\Infrastructure",
+    "\\monk-mode-backend\\Migrations",
+    "\\monk-mode-backend\\Models",
+    "\\monk-mode-backend\\obj",
+    "\\monk-mode-backend\\Properties"
+  ],
+  "SelectedNode": "\\monk-mode-backend\\Properties\\launchSettings.json",
+  "PreviewInSolutionExplorer": false
+}
