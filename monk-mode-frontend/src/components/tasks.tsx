@@ -11,27 +11,21 @@ import {
   CreateTaskDTO,
 } from "@/services/tasks";
 
-/**
- * Diese Komponente zeigt alle Tasks des Users und ermöglicht:
- * - Neue Task anlegen
- * - Task als erledigt / nicht erledigt markieren
- * - Task löschen
- */
-export function Tasks() {
-  // Lokaler State, um die Liste aller Tasks zu speichern
-  const [tasks, setTasks] = useState<Task[]>([]);
+// Diese Hilfsfunktion gibt das heutige Datum im Format YYYY-MM-DD zurück
+function getTodayDate(): string {
+  return new Date().toISOString().split("T")[0];
+}
 
-  // Lokale States für die Eingabefelder zum Erstellen einer neuen Task
+export function Tasks() {
+  const [tasks, setTasks] = useState<Task[]>([]);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [dueDate, setDueDate] = useState("");
 
-  // Beim ersten Rendern (Mount) rufen wir getAllTasks() auf
   useEffect(() => {
     fetchTasks();
   }, []);
 
-  // Funktion, um alle Tasks vom Backend zu holen und in den State zu packen
   async function fetchTasks() {
     try {
       const data = await getAllTasks();
@@ -41,11 +35,15 @@ export function Tasks() {
     }
   }
 
-  // Funktion zum Erstellen einer neuen Task
   async function handleCreateTask(e: React.FormEvent) {
-    e.preventDefault(); // Verhindert Seiten-Reload
+    e.preventDefault();
 
-    // Erstelle ein Objekt, das nur die optionalen Felder enthält, wenn sie nicht leer sind.
+    // Wenn ein Due Date angegeben wurde, prüfen wir, ob es in der Vergangenheit liegt.
+    if (dueDate && new Date(dueDate) < new Date(getTodayDate())) {
+      alert("Due Date must be today or in the future.");
+      return;
+    }
+
     const taskData: CreateTaskDTO = {
       title,
       description: description.trim() ? description : undefined,
@@ -54,11 +52,7 @@ export function Tasks() {
 
     try {
       const newTask = await createTask(taskData);
-
-      // Hänge die neue Task an die bestehende Liste
       setTasks([...tasks, newTask]);
-
-      // Leere die Eingabefelder
       setTitle("");
       setDescription("");
       setDueDate("");
@@ -67,35 +61,26 @@ export function Tasks() {
     }
   }
 
-  // Funktion, um isCompleted zu togglen
   async function handleToggleComplete(task: Task) {
     try {
-      // Wichtig: Wir senden auch den Titel und andere Felder mit, da diese für das Update erforderlich sind.
       await updateTask(task.id, {
         title: task.title,
         description: task.description,
         dueDate: task.dueDate,
         isCompleted: !task.isCompleted,
       });
-
-      // Aktualisiere den lokalen State
-      const updatedTasks = tasks.map((t) => {
-        if (t.id === task.id) {
-          return { ...t, isCompleted: !t.isCompleted };
-        }
-        return t;
-      });
+      const updatedTasks = tasks.map((t) =>
+        t.id === task.id ? { ...t, isCompleted: !t.isCompleted } : t
+      );
       setTasks(updatedTasks);
     } catch (error) {
       console.error("Error updating task:", error);
     }
   }
 
-  // Funktion zum Löschen einer Task
   async function handleDeleteTask(taskId: number) {
     try {
       await deleteTask(taskId);
-      // Entferne die Task aus dem lokalen State
       const updatedTasks = tasks.filter((t) => t.id !== taskId);
       setTasks(updatedTasks);
     } catch (error) {
@@ -109,7 +94,6 @@ export function Tasks() {
         <CardHeader>
           <CardTitle>Tasks</CardTitle>
         </CardHeader>
-
         <CardContent>
           {/* Formular zum Erstellen einer neuen Task */}
           <form onSubmit={handleCreateTask} className="space-y-4 mb-6">
@@ -123,9 +107,10 @@ export function Tasks() {
                 placeholder="Enter a task title"
               />
             </div>
-
             <div>
-              <label className="text-sm font-medium">Description (optional)</label>
+              <label className="text-sm font-medium">
+                Description (optional)
+              </label>
               <Input
                 type="text"
                 value={description}
@@ -133,16 +118,22 @@ export function Tasks() {
                 placeholder="Enter a short description"
               />
             </div>
-
             <div>
-              <label className="text-sm font-medium">Due Date (optional)</label>
+              <label className="text-sm font-medium">
+                Due Date (optional)
+              </label>
               <Input
                 type="date"
                 value={dueDate}
+                // Setzt das Minimum auf das heutige Datum
+                min={getTodayDate()}
                 onChange={(e) => setDueDate(e.target.value)}
+                onInvalid={(e) =>
+                  e.currentTarget.setCustomValidity("Due Date must be today or in the future.")
+                }
+                onInput={(e) => e.currentTarget.setCustomValidity("")}
               />
             </div>
-
             <Button type="submit">Add Task</Button>
           </form>
 
@@ -172,7 +163,6 @@ export function Tasks() {
                     </p>
                   )}
                 </div>
-
                 <div className="space-x-2">
                   <Button
                     variant="outline"
@@ -180,7 +170,6 @@ export function Tasks() {
                   >
                     {task.isCompleted ? "Undo" : "Complete"}
                   </Button>
-
                   <Button
                     variant="destructive"
                     onClick={() => handleDeleteTask(task.id)}

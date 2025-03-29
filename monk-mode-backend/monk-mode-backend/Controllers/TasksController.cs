@@ -33,6 +33,13 @@ namespace monk_mode_backend.Controllers
             if (createDto == null || string.IsNullOrWhiteSpace(createDto.Title))
                 return BadRequest("Title is required.");
 
+            // Wenn ein DueDate vorhanden ist und es in der Vergangenheit liegt,
+            // geben wir einen BadRequest zurück.
+            if (createDto.DueDate.HasValue && createDto.DueDate.Value.Date < DateTime.Today)
+            {
+                return BadRequest("Due Date must be today or in the future.");
+            }
+
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
                 return Unauthorized();
