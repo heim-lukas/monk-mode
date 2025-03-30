@@ -1,1 +1,34 @@
-// put your profile related api calls here
+import { API_BASE_URL } from "@/config/api";
+
+export interface UserProfile {
+  id: string;
+  username: string;
+  email: string;
+}
+
+export async function getUserProfile(): Promise<UserProfile> {
+  const token = localStorage.getItem("token");
+  if (!token) {
+    throw new Error("No authentication token found");
+  }
+
+  try {
+    const response = await fetch(`${API_BASE_URL}/User/profile`, {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!response.ok) {
+      const errorData = await response.text();
+      throw new Error(errorData || "Failed to fetch user profile");
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error("Error fetching profile:", error);
+    throw error;
+  }
+}
