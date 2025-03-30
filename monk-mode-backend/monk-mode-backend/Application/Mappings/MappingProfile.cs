@@ -6,6 +6,7 @@ namespace monk_mode_backend.Application.Mappings {
     public class MappingProfile : Profile {
         public MappingProfile() {
             CreateMap<TimeBlock, TimeBlockDTO>().ReverseMap();
+            CreateMap<Friendship, FriendshipDTO>();
         }
     }
 }
