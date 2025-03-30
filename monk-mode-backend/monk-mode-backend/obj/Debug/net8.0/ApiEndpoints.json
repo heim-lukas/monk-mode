@@ -42,6 +42,90 @@
     ]
   },
   {
+    "ContainingType": "monk_mode_backend.Controllers.FriendshipController",
+    "Method": "GetFriends",
+    "RelativePath": "api/Friendship",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "monk_mode_backend.Controllers.FriendshipController",
+    "Method": "RemoveFriend",
+    "RelativePath": "api/Friendship/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "monk_mode_backend.Controllers.FriendshipController",
+    "Method": "AcceptFriendRequest",
+    "RelativePath": "api/Friendship/accept/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "monk_mode_backend.Controllers.FriendshipController",
+    "Method": "RejectFriendRequest",
+    "RelativePath": "api/Friendship/reject/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "monk_mode_backend.Controllers.FriendshipController",
+    "Method": "GetFriendRequests",
+    "RelativePath": "api/Friendship/requests",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "monk_mode_backend.Controllers.FriendshipController",
+    "Method": "SendFriendRequest",
+    "RelativePath": "api/Friendship/send",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "monk_mode_backend.Models.FriendRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "monk_mode_backend.Controllers.TimeBlockController",
     "Method": "CreateTimeBlock",
     "RelativePath": "api/TimeBlock",
@@ -118,6 +202,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "monk_mode_backend.Controllers.UserController",
+    "Method": "GetProfile",
+    "RelativePath": "api/User/profile",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   }
 ]
