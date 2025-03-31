@@ -5,18 +5,26 @@ namespace monk_mode_backend.Domain
     public class UserTask
     {
         public int Id { get; set; }
-        public string Title { get; set; }  // Pflichtfeld
-        public string? Description { get; set; } // Optional
-        public DateTime? DueDate { get; set; } // Optional
+
+        // Required field
+        public string Title { get; set; }
+
+        // Optional field
+        public string? Description { get; set; }
+
+        // Optional field
+        public DateTime? DueDate { get; set; } 
         public bool IsCompleted { get; set; }
         public DateTime CreatedAt { get; set; }
-        public DateTime? CompletedAt { get; set; } // Wird gesetzt, wenn Task abgeschlossen wird; bei Re-Öffnung wieder null
 
-        // Beziehung zum User
+        // Set when task is completed; null when reopened
+        public DateTime? CompletedAt { get; set; } 
+
+        // Relationship to the user
         public string UserId { get; set; }
         public ApplicationUser User { get; set; } = null!;
 
-        // Optionale Beziehung zu einem TimeBlock
+        // Optional relationship to a time block
         public int? TimeBlockId { get; set; }
         public TimeBlock? TimeBlock { get; set; }
     }
