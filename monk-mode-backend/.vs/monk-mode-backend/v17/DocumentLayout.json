@@ -51,6 +51,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "DocumentIndex": 2,
+              "Title": "Task.cs",
+              "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Domain\\Task.cs",
+              "RelativeDocumentMoniker": "monk-mode-backend\\Domain\\Task.cs",
+              "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Domain\\Task.cs",
+              "RelativeToolTip": "monk-mode-backend\\Domain\\Task.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAAwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T10:44:58.07Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "TimeBlockController.cs",
               "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Controllers\\TimeBlockController.cs",
               "RelativeDocumentMoniker": "monk-mode-backend\\Controllers\\TimeBlockController.cs",
