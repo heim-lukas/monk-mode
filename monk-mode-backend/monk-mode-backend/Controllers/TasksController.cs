@@ -91,6 +91,22 @@ namespace monk_mode_backend.Controllers
             return Ok(taskDto);
         }
 
+        // GET: api/tasks/incomplete
+        // Return all incomplete tasks for the logged-in user
+        [HttpGet("incomplete")]
+        public async Task<IActionResult> GetIncompleteTasks() {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+                return Unauthorized();
+
+            var incompleteTasks = await _dbContext.Set<UserTask>()
+                .Where(t => t.UserId == user.Id && !t.IsCompleted)  // Filter by user and incomplete tasks
+                .ToListAsync();
+
+            var tasksDto = _mapper.Map<List<TaskDTO>>(incompleteTasks);
+            return Ok(tasksDto);
+        }
+
         // PUT: api/tasks/{id}
         // Update a task (mark complete or reopen)
         [HttpPut("{id}")]

@@ -53,6 +53,7 @@ namespace monk_mode_backend.Controllers {
 
             var timeBlocks = await _dbContext.TimeBlocks
                 .Where(tb => tb.UserId == user.Id)
+                .Include(tb => tb.Tasks)
                 .ToListAsync();
 
             var timeBlockDTOs = _mapper.Map<List<TimeBlockDTO>>(timeBlocks); // Map list of entities to DTOs
@@ -89,14 +90,36 @@ namespace monk_mode_backend.Controllers {
                 return Unauthorized();
 
             var timeBlock = await _dbContext.TimeBlocks
+                .Include(tb => tb.Tasks)
                 .FirstOrDefaultAsync(tb => tb.UserId == user.Id && tb.Id == id);
 
             if (timeBlock == null)
                 return NotFound();
 
+            // Ensure that each task has the correct UserId
+            foreach (var task in timeBlockData.Tasks) {
+                if (task.UserId == null) {
+                    task.UserId = user.Id;  // Set the UserId for each task
+                }
+            }
+
+            // Get IDs of the tasks that should be linked now
+            var newTaskIds = timeBlockData.Tasks.Select(t => t.Id).ToHashSet();
+
+            timeBlock.Tasks.Clear();
+
+            if (newTaskIds.Any()) {
+                var tasksToAdd = await _dbContext.Tasks
+                    .Where(t => newTaskIds.Contains(t.Id) && t.UserId == user.Id)
+                    .ToListAsync();
+
+                foreach(var task in tasksToAdd) {
+                    timeBlock.Tasks.Add(task);
+                }
+            }
+
             _mapper.Map(timeBlockData, timeBlock); // Map DTO to entity
 
-            _dbContext.TimeBlocks.Update(timeBlock);
             await _dbContext.SaveChangesAsync();
 
             return NoContent();  // 204 No Content
@@ -110,15 +133,26 @@ namespace monk_mode_backend.Controllers {
                 return Unauthorized();
 
             var timeBlock = await _dbContext.TimeBlocks
+                .Include(tb => tb.Tasks)  // Include linked tasks
                 .FirstOrDefaultAsync(tb => tb.UserId == user.Id && tb.Id == id);
 
             if (timeBlock == null)
                 return NotFound();
 
+            // Unlink tasks if any are linked
+            if (timeBlock.Tasks.Any()) {
+                foreach (var task in timeBlock.Tasks) {
+                    task.TimeBlockId = null;  // Unlink the task
+                }
+            }
+
+            // Remove the time block
             _dbContext.TimeBlocks.Remove(timeBlock);
+
+            // Save all changes in a single transaction
             await _dbContext.SaveChangesAsync();
 
-            return NoContent();  // 204 No Content
+            return NoContent();
         }
     }
 }

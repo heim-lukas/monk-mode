@@ -8,7 +8,7 @@ namespace monk_mode_backend.Application.Mappings
     {
         public MappingProfile()
         {
-            CreateMap<TimeBlock, TimeBlockDTO>().ReverseMap();
+            CreateMap<TimeBlock, TimeBlockDTO>().ReverseMap().ForMember(dest => dest.Tasks, opt => opt.Ignore());
             CreateMap<Friendship, FriendshipDTO>();
             CreateMap<UserTask, TaskDTO>().ReverseMap();
             CreateMap<UserTask, CreateTaskDTO>().ReverseMap();

@@ -1,3 +1,5 @@
+import { Task } from "@/services";
+
 export interface TimeBlock {
   id?: string;
   title: string;
@@ -5,4 +7,5 @@ export interface TimeBlock {
   startTime: string;
   endTime: string;
   isFocus: boolean;
+  tasks: Task[];
 }
