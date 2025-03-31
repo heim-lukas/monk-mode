@@ -84,50 +84,32 @@
         }
       }
     },
+<<<<<<< HEAD
     "/api/Friendship": {
       "get": {
         "tags": [
           "Friendship"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Friendship/requests": {
-      "get": {
-        "tags": [
-          "Friendship"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Friendship/send": {
+=======
+    "/api/Tasks": {
       "post": {
         "tags": [
-          "Friendship"
+          "Tasks"
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/FriendRequestDTO"
+                "$ref": "#/components/schemas/CreateTaskDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/FriendRequestDTO"
+                "$ref": "#/components/schemas/CreateTaskDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/FriendRequestDTO"
+                "$ref": "#/components/schemas/CreateTaskDTO"
               }
             }
           }
@@ -137,12 +119,121 @@
             "description": "OK"
           }
         }
+      },
+      "get": {
+        "tags": [
+          "Tasks"
+>>>>>>> main
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+<<<<<<< HEAD
+    "/api/Friendship/requests": {
+      "get": {
+        "tags": [
+          "Friendship"
+=======
+    "/api/Tasks/{id}": {
+      "get": {
+        "tags": [
+          "Tasks"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+>>>>>>> main
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+<<<<<<< HEAD
+      }
+    },
+    "/api/Friendship/send": {
+      "post": {
+        "tags": [
+          "Friendship"
+=======
+      },
+      "put": {
+        "tags": [
+          "Tasks"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+>>>>>>> main
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+<<<<<<< HEAD
+                "$ref": "#/components/schemas/FriendRequestDTO"
+=======
+                "$ref": "#/components/schemas/UpdateTaskDTO"
+>>>>>>> main
+              }
+            },
+            "text/json": {
+              "schema": {
+<<<<<<< HEAD
+                "$ref": "#/components/schemas/FriendRequestDTO"
+=======
+                "$ref": "#/components/schemas/UpdateTaskDTO"
+>>>>>>> main
+              }
+            },
+            "application/*+json": {
+              "schema": {
+<<<<<<< HEAD
+                "$ref": "#/components/schemas/FriendRequestDTO"
+=======
+                "$ref": "#/components/schemas/UpdateTaskDTO"
+>>>>>>> main
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+<<<<<<< HEAD
       }
     },
     "/api/Friendship/accept/{id}": {
       "post": {
         "tags": [
           "Friendship"
+=======
+      },
+      "delete": {
+        "tags": [
+          "Tasks"
+>>>>>>> main
         ],
         "parameters": [
           {
@@ -162,10 +253,17 @@
         }
       }
     },
+<<<<<<< HEAD
     "/api/Friendship/reject/{id}": {
       "post": {
         "tags": [
           "Friendship"
+=======
+    "/api/Tasks/{id}/link/{timeblockId}": {
+      "post": {
+        "tags": [
+          "Tasks"
+>>>>>>> main
         ],
         "parameters": [
           {
@@ -176,6 +274,18 @@
               "type": "integer",
               "format": "int32"
             }
+<<<<<<< HEAD
+=======
+          },
+          {
+            "name": "timeblockId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+>>>>>>> main
           }
         ],
         "responses": {
@@ -185,10 +295,17 @@
         }
       }
     },
+<<<<<<< HEAD
     "/api/Friendship/{id}": {
       "delete": {
         "tags": [
           "Friendship"
+=======
+    "/api/Tasks/{id}/unlink": {
+      "post": {
+        "tags": [
+          "Tasks"
+>>>>>>> main
         ],
         "parameters": [
           {
@@ -332,6 +449,7 @@
           }
         }
       }
+<<<<<<< HEAD
     },
     "/api/User/profile": {
       "get": {
@@ -344,16 +462,36 @@
           }
         }
       }
+=======
+>>>>>>> main
     }
   },
   "components": {
     "schemas": {
+<<<<<<< HEAD
       "FriendRequestDTO": {
         "type": "object",
         "properties": {
           "friendId": {
             "type": "string",
             "nullable": true
+=======
+      "CreateTaskDTO": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "dueDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+>>>>>>> main
           }
         },
         "additionalProperties": false
@@ -454,6 +592,31 @@
           }
         },
         "additionalProperties": false
+<<<<<<< HEAD
+=======
+      },
+      "UpdateTaskDTO": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "dueDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "isCompleted": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+>>>>>>> main
       }
     },
     "securitySchemes": {

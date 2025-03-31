@@ -8,6 +8,6 @@ namespace monk_mode_backend.Domain
         public int Xp { get; set; }
         public DateTime CreatedAt { get; set; }
         public ICollection<TimeBlock> TimeBlocks { get; set; } = new List<TimeBlock>();
-        public ICollection<Task> Tasks { get; set; } = new List<Task>();
+        public ICollection<UserTask> Tasks { get; set; } = new List<UserTask>();
     }
 }

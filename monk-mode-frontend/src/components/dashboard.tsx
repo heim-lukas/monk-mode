@@ -6,6 +6,7 @@ import { Tasks } from "./tasks";
 import { Profile } from "./profile";
 import { Friends } from "./friends";
 import { NotFound } from "./not-found";
+import { TimeblockList } from "./timeblock-list";
 
 function DashboardHome() {
   return (
@@ -15,7 +16,7 @@ function DashboardHome() {
           <CardTitle>Welcome to MonkMode</CardTitle>
         </CardHeader>
         <CardContent>
-          <p>Insert timeblock here</p>
+          <TimeblockList />
         </CardContent>
       </Card>
     </div>
