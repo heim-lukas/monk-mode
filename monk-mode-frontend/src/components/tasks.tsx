@@ -10,22 +10,47 @@ import {
   Task,
   CreateTaskDTO,
 } from "@/services/tasks";
+import {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+  TabsContent
+} from "@/components/ui/tabs";
 
-// Diese Hilfsfunktion gibt das heutige Datum im Format YYYY-MM-DD zurück
+
+// Hilfsfunktion, die das heutige Datum (YYYY-MM-DD) zurückgibt
 function getTodayDate(): string {
   return new Date().toISOString().split("T")[0];
 }
 
+// Vergleichsfunktion, um zwei Tasks nach ihrem Due Date zu sortieren.
+// Tasks mit einem Due Date werden vorn platziert, fehlende Due Dates landen weiter hinten.
+// Falls beide kein Due Date haben, wird nach dem Erstellungsdatum sortiert.
+function compareTasksByDueDate(a: Task, b: Task): number {
+  if (a.dueDate && b.dueDate) {
+    return new Date(a.dueDate).getTime() - new Date(b.dueDate).getTime();
+  } else if (a.dueDate) {
+    return -1;
+  } else if (b.dueDate) {
+    return 1;
+  } else {
+    return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime();
+  }
+}
+
 export function Tasks() {
+  // Lokaler State für die Task-Liste und Eingabefelder
   const [tasks, setTasks] = useState<Task[]>([]);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [dueDate, setDueDate] = useState("");
 
+  // Beim ersten Rendern werden die Tasks geladen
   useEffect(() => {
     fetchTasks();
   }, []);
 
+  // Funktion, um Tasks vom Backend zu holen
   async function fetchTasks() {
     try {
       const data = await getAllTasks();
@@ -35,15 +60,17 @@ export function Tasks() {
     }
   }
 
+  // Handler für das Erstellen einer neuen Task
   async function handleCreateTask(e: React.FormEvent) {
     e.preventDefault();
 
-    // Wenn ein Due Date angegeben wurde, prüfen wir, ob es in der Vergangenheit liegt.
+    // Validierung: Falls ein Due Date eingegeben wurde, darf es nicht in der Vergangenheit liegen.
     if (dueDate && new Date(dueDate) < new Date(getTodayDate())) {
       alert("Due Date must be today or in the future.");
       return;
     }
 
+    // Erstellen des Task-Datenobjekts – optionale Felder werden nur gesetzt, wenn sie einen Wert haben.
     const taskData: CreateTaskDTO = {
       title,
       description: description.trim() ? description : undefined,
@@ -53,6 +80,7 @@ export function Tasks() {
     try {
       const newTask = await createTask(taskData);
       setTasks([...tasks, newTask]);
+      // Felder zurücksetzen
       setTitle("");
       setDescription("");
       setDueDate("");
@@ -61,6 +89,8 @@ export function Tasks() {
     }
   }
 
+  // Handler, um den Completion-Status einer Task umzuschalten.
+  // Hier senden wir alle erforderlichen Felder, da das Backend den vollständigen Datensatz erwartet.
   async function handleToggleComplete(task: Task) {
     try {
       await updateTask(task.id, {
@@ -78,15 +108,23 @@ export function Tasks() {
     }
   }
 
+  // Handler zum Löschen einer Task
   async function handleDeleteTask(taskId: number) {
     try {
       await deleteTask(taskId);
-      const updatedTasks = tasks.filter((t) => t.id !== taskId);
-      setTasks(updatedTasks);
+      setTasks(tasks.filter((t) => t.id !== taskId));
     } catch (error) {
       console.error("Error deleting task:", error);
     }
   }
+
+  // Aufteilen der Tasks in offene und abgeschlossene Tasks, jeweils sortiert nach Due Date.
+  const openTasks = tasks
+    .filter((task) => !task.isCompleted)
+    .sort(compareTasksByDueDate);
+  const completedTasks = tasks
+    .filter((task) => task.isCompleted)
+    .sort(compareTasksByDueDate);
 
   return (
     <div className="container mx-auto p-6">
@@ -95,7 +133,7 @@ export function Tasks() {
           <CardTitle>Tasks</CardTitle>
         </CardHeader>
         <CardContent>
-          {/* Formular zum Erstellen einer neuen Task */}
+          {/* Formular zur Erstellung einer neuen Task */}
           <form onSubmit={handleCreateTask} className="space-y-4 mb-6">
             <div>
               <label className="text-sm font-medium">Title</label>
@@ -125,7 +163,6 @@ export function Tasks() {
               <Input
                 type="date"
                 value={dueDate}
-                // Setzt das Minimum auf das heutige Datum
                 min={getTodayDate()}
                 onChange={(e) => setDueDate(e.target.value)}
                 onInvalid={(e) =>
@@ -137,49 +174,103 @@ export function Tasks() {
             <Button type="submit">Add Task</Button>
           </form>
 
-          {/* Liste aller vorhandenen Tasks */}
-          <ul className="space-y-2">
-            {tasks.map((task) => (
-              <li
-                key={task.id}
-                className="flex items-center justify-between p-2 rounded-md border"
-              >
-                <div>
-                  <p
-                    className={`font-medium ${
-                      task.isCompleted ? "line-through text-gray-500" : ""
-                    }`}
-                  >
-                    {task.title}
-                  </p>
-                  {task.description && (
-                    <p className="text-sm text-muted-foreground">
-                      {task.description}
-                    </p>
-                  )}
-                  {task.dueDate && (
-                    <p className="text-xs text-muted-foreground">
-                      Due: {new Date(task.dueDate).toLocaleDateString()}
-                    </p>
-                  )}
-                </div>
-                <div className="space-x-2">
-                  <Button
-                    variant="outline"
-                    onClick={() => handleToggleComplete(task)}
-                  >
-                    {task.isCompleted ? "Undo" : "Complete"}
-                  </Button>
-                  <Button
-                    variant="destructive"
-                    onClick={() => handleDeleteTask(task.id)}
-                  >
-                    Delete
-                  </Button>
-                </div>
-              </li>
-            ))}
-          </ul>
+          {/* Tabs-Komponente zur Anzeige offener und abgeschlossener Tasks */}
+          <Tabs defaultValue="open" className="w-full">
+            <TabsList className="grid w-full grid-cols-2">
+              <TabsTrigger value="open">Open Tasks</TabsTrigger>
+              <TabsTrigger value="completed">Completed Tasks</TabsTrigger>
+            </TabsList>
+            <TabsContent value="open">
+              {openTasks.length > 0 ? (
+                <ul className="space-y-2">
+                  {openTasks.map((task) => (
+                    <li
+                      key={task.id}
+                      className="flex items-center justify-between p-2 rounded-md border"
+                    >
+                      <div>
+                        <p className="font-medium">{task.title}</p>
+                        {task.description && (
+                          <p className="text-sm text-muted-foreground">
+                            {task.description}
+                          </p>
+                        )}
+                        {task.dueDate && (
+                          <p className="text-xs text-muted-foreground">
+                            Due: {new Date(task.dueDate).toLocaleDateString()}
+                          </p>
+                        )}
+                      </div>
+                      <div className="space-x-2">
+                        <Button
+                          variant="outline"
+                          onClick={() => handleToggleComplete(task)}
+                        >
+                          Complete
+                        </Button>
+                        <Button
+                          variant="destructive"
+                          onClick={() => handleDeleteTask(task.id)}
+                        >
+                          Delete
+                        </Button>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-center text-muted-foreground">
+                  No open tasks.
+                </p>
+              )}
+            </TabsContent>
+            <TabsContent value="completed">
+              {completedTasks.length > 0 ? (
+                <ul className="space-y-2">
+                  {completedTasks.map((task) => (
+                    <li
+                      key={task.id}
+                      className="flex items-center justify-between p-2 rounded-md border"
+                    >
+                      <div>
+                        <p className="font-medium line-through text-gray-500">
+                          {task.title}
+                        </p>
+                        {task.description && (
+                          <p className="text-sm text-muted-foreground">
+                            {task.description}
+                          </p>
+                        )}
+                        {task.dueDate && (
+                          <p className="text-xs text-muted-foreground">
+                            Due: {new Date(task.dueDate).toLocaleDateString()}
+                          </p>
+                        )}
+                      </div>
+                      <div className="space-x-2">
+                        <Button
+                          variant="outline"
+                          onClick={() => handleToggleComplete(task)}
+                        >
+                          Undo
+                        </Button>
+                        <Button
+                          variant="destructive"
+                          onClick={() => handleDeleteTask(task.id)}
+                        >
+                          Delete
+                        </Button>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-center text-muted-foreground">
+                  No completed tasks.
+                </p>
+              )}
+            </TabsContent>
+          </Tabs>
         </CardContent>
       </Card>
     </div>
