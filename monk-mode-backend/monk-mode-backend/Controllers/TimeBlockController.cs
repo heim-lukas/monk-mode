@@ -90,6 +90,7 @@ namespace monk_mode_backend.Controllers {
                 return Unauthorized();
 
             var timeBlock = await _dbContext.TimeBlocks
+                .Include(tb => tb.Tasks)
                 .FirstOrDefaultAsync(tb => tb.UserId == user.Id && tb.Id == id);
 
             if (timeBlock == null)
@@ -100,6 +101,35 @@ namespace monk_mode_backend.Controllers {
                 if (task.UserId == null) {
                     task.UserId = user.Id;  // Set the UserId for each task
                 }
+            }
+
+            // Get currently linked tasks
+            var currentTasks = timeBlock.Tasks.ToList();
+
+            // Get IDs of the tasks that should be linked now
+            var newTaskIds = timeBlockData.Tasks.Select(t => t.Id).ToHashSet();
+
+            // Determine tasks to unlink (those in currentTasks but not in newTaskIds)
+            var tasksToUnlink = currentTasks.Where(t => !newTaskIds.Contains(t.Id)).ToList();
+
+            // Fetch all potentially new tasks from the database first
+            var allRelevantTasks = await _dbContext.Tasks
+                .Where(t => newTaskIds.Contains(t.Id) && t.UserId == user.Id)
+                .AsNoTracking()
+                .ToListAsync();
+
+            // Filter in-memory to exclude already linked tasks
+            var tasksToLink = allRelevantTasks.Where(t => !currentTasks.Any(ct => ct.Id == t.Id)).ToList();
+
+
+            // Unlink tasks by setting TimeBlockId to null
+            foreach (var task in tasksToUnlink) {
+                task.TimeBlockId = null;
+            }
+
+            // Add new tasks to time block
+            foreach (var task in tasksToLink) {
+                task.TimeBlockId = timeBlock.Id;
             }
 
             _mapper.Map(timeBlockData, timeBlock); // Map DTO to entity

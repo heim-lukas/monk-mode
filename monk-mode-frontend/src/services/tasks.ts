@@ -37,6 +37,24 @@ export async function getAllTasks(): Promise<Task[]> {
   return response.json();
 }
 
+// Fetch all incomplete tasks for the logged-in user.
+export async function getIncompleteTasks(): Promise<Task[]> {
+  const token = localStorage.getItem("token");
+
+  const response = await fetch(`${API_BASE_URL}/tasks/incomplete`, {
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch incomplete tasks.");
+  }
+
+  return response.json();
+}
+
 // Create a new task.
 export async function createTask(data: CreateTaskDTO): Promise<Task> {
   const token = localStorage.getItem("token");

@@ -9,6 +9,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { updateTimeBlock } from "@/services/timeblocks";
+import { getIncompleteTasks, Task } from "@/services/tasks"; // Assuming this function fetches tasks
 import { TimeBlock } from "@/types/types";
 
 interface EditTimeBlockDialogProps {
@@ -27,10 +28,22 @@ export const EditTimeBlockDialog: React.FC<EditTimeBlockDialogProps> = ({
   const [editedTimeBlock, setEditedTimeBlock] = useState(timeBlock);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [tasks, setTasks] = useState<Task[]>([]);
+  const [selectedTaskIds, setSelectedTaskIds] = useState<number[]>([]);
 
   useEffect(() => {
     setEditedTimeBlock(timeBlock);
-  }, [timeBlock]);
+    fetchIncompleteTasks();
+  }, [timeBlock, open]);
+
+  const fetchIncompleteTasks = async () => {
+    try {
+      const incompleteTasks = await getIncompleteTasks(); // Fetch incomplete tasks
+      setTasks(incompleteTasks);
+    } catch (err) {
+      setError("Failed to load incomplete tasks.");
+    }
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
@@ -38,6 +51,14 @@ export const EditTimeBlockDialog: React.FC<EditTimeBlockDialogProps> = ({
       ...prev,
       [name]: type === "checkbox" ? checked : value,
     }));
+  };
+
+  const handleTaskChange = (taskId: number) => {
+    setSelectedTaskIds((prevSelected) =>
+      prevSelected.includes(taskId)
+        ? prevSelected.filter((id) => id !== taskId)
+        : [...prevSelected, taskId]
+    );
   };
 
   const validateTime = (time: string) => {
@@ -74,8 +95,18 @@ export const EditTimeBlockDialog: React.FC<EditTimeBlockDialogProps> = ({
     }
 
     try {
-      await updateTimeBlock(token, editedTimeBlock);
-      onSave(editedTimeBlock);
+      // Map selected task IDs to task objects
+      const selectedTasks = tasks.filter((task) =>
+        selectedTaskIds.includes(task.id)
+      );
+
+      const updatedTimeBlock = {
+        ...editedTimeBlock,
+        tasks: selectedTasks, // Use task objects
+      };
+
+      await updateTimeBlock(token, updatedTimeBlock);
+      onSave(updatedTimeBlock);
       onClose();
     } catch (err) {
       setError(
@@ -138,17 +169,21 @@ export const EditTimeBlockDialog: React.FC<EditTimeBlockDialogProps> = ({
           </div>
 
           {/* Task Selection */}
-          {editedTimeBlock.tasks.length > 0 && (
+          {tasks.length > 0 && (
             <div className="mt-4">
               <h3 className="text-lg font-semibold">Tasks</h3>
               <ul className="border rounded-lg p-2 mt-2 space-y-2">
-                {editedTimeBlock.tasks.map((task) => (
+                {tasks.map((task) => (
                   <li
                     key={task.id}
                     className="p-2 border rounded-md flex justify-between"
                   >
                     <span>{task.title}</span>
-                    <input type="checkbox" checked={true} readOnly />
+                    <input
+                      type="checkbox"
+                      checked={selectedTaskIds.includes(task.id)}
+                      onChange={() => handleTaskChange(task.id)}
+                    />
                   </li>
                 ))}
               </ul>
