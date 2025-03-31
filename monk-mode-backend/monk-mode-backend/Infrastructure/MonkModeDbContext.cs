@@ -1,13 +1,13 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using monk_mode_backend.Domain;
-using Task = monk_mode_backend.Domain.Task;
+using UserTask = monk_mode_backend.Domain.UserTask;
 
 namespace monk_mode_backend.Infrastructure {
     public class MonkModeDbContext : IdentityDbContext<ApplicationUser> {
 
         public DbSet<Friendship> Friendships { get; set; }
-        public DbSet<Task> Tasks { get; set; }
+        public DbSet<UserTask> Tasks { get; set; }
         public DbSet<TimeBlock> TimeBlocks { get; set; }
 
 
