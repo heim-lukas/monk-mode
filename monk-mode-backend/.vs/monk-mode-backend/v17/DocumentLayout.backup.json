@@ -1,37 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\David\\Documents\\GitHub\\monk-mode\\monk-mode-backend\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\david\\documents\\github\\monk-mode\\monk-mode-backend\\monk-mode-backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\David\\Documents\\GitHub\\monk-mode\\monk-mode-backend\\monk-mode-backend\\appsettings.json",
-              "RelativeDocumentMoniker": "monk-mode-backend\\appsettings.json",
-              "ToolTip": "C:\\Users\\David\\Documents\\GitHub\\monk-mode\\monk-mode-backend\\monk-mode-backend\\appsettings.json",
-              "RelativeToolTip": "monk-mode-backend\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-24T23:26:27.092Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

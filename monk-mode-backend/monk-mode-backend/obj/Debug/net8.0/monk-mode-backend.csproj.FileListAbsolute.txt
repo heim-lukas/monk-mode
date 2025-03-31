@@ -290,3 +290,4 @@ C:\Users\David\Documents\GitHub\monk-mode\monk-mode-backend\monk-mode-backend\ob
 C:\Users\David\Documents\GitHub\monk-mode\monk-mode-backend\monk-mode-backend\obj\Debug\net8.0\monk-mode-backend.pdb
 C:\Users\David\Documents\GitHub\monk-mode\monk-mode-backend\monk-mode-backend\obj\Debug\net8.0\monk-mode-backend.genruntimeconfig.cache
 C:\Users\David\Documents\GitHub\monk-mode\monk-mode-backend\monk-mode-backend\obj\Debug\net8.0\ref\monk-mode-backend.dll
+C:\Users\David\Documents\GitHub\monk-mode\monk-mode-backend\monk-mode-backend\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

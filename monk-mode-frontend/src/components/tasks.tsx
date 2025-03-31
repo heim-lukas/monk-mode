@@ -10,22 +10,15 @@ import {
   Task,
   CreateTaskDTO,
 } from "@/services/tasks";
-import {
-  Tabs,
-  TabsList,
-  TabsTrigger,
-  TabsContent
-} from "@/components/ui/tabs";
+import { TaskDataDialog } from "./task-data-dialog";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
-
-// Hilfsfunktion, die das heutige Datum (YYYY-MM-DD) zurückgibt
+// Returns today's date in YYYY-MM-DD format
 function getTodayDate(): string {
   return new Date().toISOString().split("T")[0];
 }
 
-// Vergleichsfunktion, um zwei Tasks nach ihrem Due Date zu sortieren.
-// Tasks mit einem Due Date werden vorn platziert, fehlende Due Dates landen weiter hinten.
-// Falls beide kein Due Date haben, wird nach dem Erstellungsdatum sortiert.
+// Compare two tasks by due date (fallback to createdAt if no dueDate)
 function compareTasksByDueDate(a: Task, b: Task): number {
   if (a.dueDate && b.dueDate) {
     return new Date(a.dueDate).getTime() - new Date(b.dueDate).getTime();
@@ -39,18 +32,18 @@ function compareTasksByDueDate(a: Task, b: Task): number {
 }
 
 export function Tasks() {
-  // Lokaler State für die Task-Liste und Eingabefelder
   const [tasks, setTasks] = useState<Task[]>([]);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [dueDate, setDueDate] = useState("");
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
-  // Beim ersten Rendern werden die Tasks geladen
+  // Load tasks on component mount
   useEffect(() => {
     fetchTasks();
   }, []);
 
-  // Funktion, um Tasks vom Backend zu holen
+  // Fetch tasks from backend
   async function fetchTasks() {
     try {
       const data = await getAllTasks();
@@ -60,27 +53,23 @@ export function Tasks() {
     }
   }
 
-  // Handler für das Erstellen einer neuen Task
+  // Handle form submit for creating a new task
   async function handleCreateTask(e: React.FormEvent) {
     e.preventDefault();
-
-    // Validierung: Falls ein Due Date eingegeben wurde, darf es nicht in der Vergangenheit liegen.
+    // Check due date is valid
     if (dueDate && new Date(dueDate) < new Date(getTodayDate())) {
       alert("Due Date must be today or in the future.");
       return;
     }
-
-    // Erstellen des Task-Datenobjekts – optionale Felder werden nur gesetzt, wenn sie einen Wert haben.
+    // Prepare task data object
     const taskData: CreateTaskDTO = {
       title,
       description: description.trim() ? description : undefined,
       dueDate: dueDate ? dueDate : undefined,
     };
-
     try {
       const newTask = await createTask(taskData);
       setTasks([...tasks, newTask]);
-      // Felder zurücksetzen
       setTitle("");
       setDescription("");
       setDueDate("");
@@ -89,8 +78,7 @@ export function Tasks() {
     }
   }
 
-  // Handler, um den Completion-Status einer Task umzuschalten.
-  // Hier senden wir alle erforderlichen Felder, da das Backend den vollständigen Datensatz erwartet.
+  // Handle toggling task complete status
   async function handleToggleComplete(task: Task) {
     try {
       await updateTask(task.id, {
@@ -108,7 +96,7 @@ export function Tasks() {
     }
   }
 
-  // Handler zum Löschen einer Task
+  // Handle deleting a task
   async function handleDeleteTask(taskId: number) {
     try {
       await deleteTask(taskId);
@@ -118,7 +106,33 @@ export function Tasks() {
     }
   }
 
-  // Aufteilen der Tasks in offene und abgeschlossene Tasks, jeweils sortiert nach Due Date.
+  // Handle save from dialog (create new or update existing task)
+  async function handleDialogSave(newTask: Task) {
+    try {
+      if (newTask.id === 0) {
+        // Create new task
+        const createdTask = await createTask({
+          title: newTask.title,
+          description: newTask.description,
+          dueDate: newTask.dueDate,
+        });
+        setTasks([...tasks, createdTask]);
+      } else {
+        // Update task (if editing is implemented)
+        await updateTask(newTask.id, {
+          title: newTask.title,
+          description: newTask.description,
+          dueDate: newTask.dueDate,
+          isCompleted: newTask.isCompleted,
+        });
+        setTasks(tasks.map((t) => (t.id === newTask.id ? newTask : t)));
+      }
+    } catch (error) {
+      console.error("Error saving task:", error);
+    }
+  }
+
+  // Filter and sort tasks into open and completed lists
   const openTasks = tasks
     .filter((task) => !task.isCompleted)
     .sort(compareTasksByDueDate);
@@ -129,52 +143,12 @@ export function Tasks() {
   return (
     <div className="container mx-auto p-6">
       <Card>
-        <CardHeader>
+        <CardHeader className="flex items-center justify-between">
           <CardTitle>Tasks</CardTitle>
+          <Button onClick={() => setIsDialogOpen(true)}>+ Add Task</Button>
         </CardHeader>
         <CardContent>
-          {/* Formular zur Erstellung einer neuen Task */}
-          <form onSubmit={handleCreateTask} className="space-y-4 mb-6">
-            <div>
-              <label className="text-sm font-medium">Title</label>
-              <Input
-                type="text"
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
-                required
-                placeholder="Enter a task title"
-              />
-            </div>
-            <div>
-              <label className="text-sm font-medium">
-                Description (optional)
-              </label>
-              <Input
-                type="text"
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
-                placeholder="Enter a short description"
-              />
-            </div>
-            <div>
-              <label className="text-sm font-medium">
-                Due Date (optional)
-              </label>
-              <Input
-                type="date"
-                value={dueDate}
-                min={getTodayDate()}
-                onChange={(e) => setDueDate(e.target.value)}
-                onInvalid={(e) =>
-                  e.currentTarget.setCustomValidity("Due Date must be today or in the future.")
-                }
-                onInput={(e) => e.currentTarget.setCustomValidity("")}
-              />
-            </div>
-            <Button type="submit">Add Task</Button>
-          </form>
-
-          {/* Tabs-Komponente zur Anzeige offener und abgeschlossener Tasks */}
+          {/* Tabs for Open and Completed Tasks */}
           <Tabs defaultValue="open" className="w-full">
             <TabsList className="grid w-full grid-cols-2">
               <TabsTrigger value="open">Open Tasks</TabsTrigger>
@@ -273,6 +247,14 @@ export function Tasks() {
           </Tabs>
         </CardContent>
       </Card>
+
+      {/* Task Creation Dialog */}
+      <TaskDataDialog
+        open={isDialogOpen}
+        onClose={() => setIsDialogOpen(false)}
+        onSave={handleDialogSave}
+        task={null} // null means a new task
+      />
     </div>
   );
 }
