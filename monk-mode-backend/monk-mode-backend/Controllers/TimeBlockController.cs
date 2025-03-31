@@ -95,6 +95,13 @@ namespace monk_mode_backend.Controllers {
             if (timeBlock == null)
                 return NotFound();
 
+            // Ensure that each task has the correct UserId
+            foreach (var task in timeBlockData.Tasks) {
+                if (task.UserId == null) {
+                    task.UserId = user.Id;  // Set the UserId for each task
+                }
+            }
+
             _mapper.Map(timeBlockData, timeBlock); // Map DTO to entity
 
             _dbContext.TimeBlocks.Update(timeBlock);
