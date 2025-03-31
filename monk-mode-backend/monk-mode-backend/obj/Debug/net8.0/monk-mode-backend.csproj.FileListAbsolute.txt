@@ -422,3 +422,4 @@ C:\Users\David\Documents\GitHub\monk-mode\monk-mode-backend\monk-mode-backend\ob
 C:\Users\David\Documents\GitHub\monk-mode\monk-mode-backend\monk-mode-backend\bin\Debug\net8.0\appsettings.json
 C:\Users\David\Documents\GitHub\monk-mode\monk-mode-backend\monk-mode-backend\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 >>>>>>> main
+C:\Users\brian\Documents\monk-mode\monk-mode-backend\monk-mode-backend\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
