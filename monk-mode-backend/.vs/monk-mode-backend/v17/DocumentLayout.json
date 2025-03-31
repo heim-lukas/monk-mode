@@ -1,38 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\David\\Documents\\GitHub\\monk-mode\\monk-mode-backend\\",
+  "WorkspaceRootPath": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\david\\documents\\github\\monk-mode\\monk-mode-backend\\monk-mode-backend\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\controllers\\authenticatecontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\controllers\\authenticatecontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\david\\documents\\github\\monk-mode\\monk-mode-backend\\monk-mode-backend\\models\\taskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\models\\taskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\david\\documents\\github\\monk-mode\\monk-mode-backend\\monk-mode-backend\\application\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\application\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\application\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\david\\documents\\github\\monk-mode\\monk-mode-backend\\monk-mode-backend\\models\\updatetaskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\models\\updatetaskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\david\\documents\\github\\monk-mode\\monk-mode-backend\\monk-mode-backend\\models\\createtaskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\models\\createtaskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\david\\documents\\github\\monk-mode\\monk-mode-backend\\monk-mode-backend\\domain\\usertask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\domain\\usertask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\david\\documents\\github\\monk-mode\\monk-mode-backend\\monk-mode-backend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\david\\documents\\github\\monk-mode\\monk-mode-backend\\monk-mode-backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\controllers\\timeblockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\controllers\\timeblockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -45,102 +29,61 @@
           "SelectedChildIndex": 4,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\David\\Documents\\GitHub\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Application\\Mappings\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "monk-mode-backend\\Application\\Mappings\\MappingProfile.cs",
-              "ToolTip": "C:\\Users\\David\\Documents\\GitHub\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Application\\Mappings\\MappingProfile.cs",
-              "RelativeToolTip": "monk-mode-backend\\Application\\Mappings\\MappingProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T21:35:26.959Z"
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TaskDTO.cs",
-              "DocumentMoniker": "C:\\Users\\David\\Documents\\GitHub\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\TaskDTO.cs",
-              "RelativeDocumentMoniker": "monk-mode-backend\\Models\\TaskDTO.cs",
-              "ToolTip": "C:\\Users\\David\\Documents\\GitHub\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\TaskDTO.cs",
-              "RelativeToolTip": "monk-mode-backend\\Models\\TaskDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Application\\Mappings\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "monk-mode-backend\\Application\\Mappings\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Application\\Mappings\\MappingProfile.cs",
+              "RelativeToolTip": "monk-mode-backend\\Application\\Mappings\\MappingProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T21:35:10.19Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T10:45:39.498Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "UpdateTaskDTO.cs",
-              "DocumentMoniker": "C:\\Users\\David\\Documents\\GitHub\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\UpdateTaskDTO.cs",
-              "RelativeDocumentMoniker": "monk-mode-backend\\Models\\UpdateTaskDTO.cs",
-              "ToolTip": "C:\\Users\\David\\Documents\\GitHub\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\UpdateTaskDTO.cs",
-              "RelativeToolTip": "monk-mode-backend\\Models\\UpdateTaskDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Title": "TimeBlockController.cs",
+              "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Controllers\\TimeBlockController.cs",
+              "RelativeDocumentMoniker": "monk-mode-backend\\Controllers\\TimeBlockController.cs",
+              "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Controllers\\TimeBlockController.cs",
+              "RelativeToolTip": "monk-mode-backend\\Controllers\\TimeBlockController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T21:34:34.867Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CreateTaskDTO.cs",
-              "DocumentMoniker": "C:\\Users\\David\\Documents\\GitHub\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\CreateTaskDTO.cs",
-              "RelativeDocumentMoniker": "monk-mode-backend\\Models\\CreateTaskDTO.cs",
-              "ToolTip": "C:\\Users\\David\\Documents\\GitHub\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\CreateTaskDTO.cs",
-              "RelativeToolTip": "monk-mode-backend\\Models\\CreateTaskDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T21:34:16.461Z"
+              "WhenOpened": "2025-03-25T10:19:30.933Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TasksController.cs",
-              "DocumentMoniker": "C:\\Users\\David\\Documents\\GitHub\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Controllers\\TasksController.cs",
-              "RelativeDocumentMoniker": "monk-mode-backend\\Controllers\\TasksController.cs",
-              "ToolTip": "C:\\Users\\David\\Documents\\GitHub\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Controllers\\TasksController.cs",
-              "RelativeToolTip": "monk-mode-backend\\Controllers\\TasksController.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwDoAAAAAAAAAAAAAAA==",
+              "Title": "AuthenticateControllers.cs",
+              "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Controllers\\AuthenticateControllers.cs",
+              "RelativeDocumentMoniker": "monk-mode-backend\\Controllers\\AuthenticateControllers.cs",
+              "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Controllers\\AuthenticateControllers.cs",
+              "RelativeToolTip": "monk-mode-backend\\Controllers\\AuthenticateControllers.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAAwBsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T18:51:05.438Z",
+              "WhenOpened": "2025-03-24T22:47:25.45Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserTask.cs",
-              "DocumentMoniker": "C:\\Users\\David\\Documents\\GitHub\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Domain\\UserTask.cs",
-              "RelativeDocumentMoniker": "monk-mode-backend\\Domain\\UserTask.cs",
-              "ToolTip": "C:\\Users\\David\\Documents\\GitHub\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Domain\\UserTask.cs",
-              "RelativeToolTip": "monk-mode-backend\\Domain\\UserTask.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T18:32:00.511Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\David\\Documents\\GitHub\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "monk-mode-backend\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\David\\Documents\\GitHub\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Properties\\launchSettings.json",
-              "RelativeToolTip": "monk-mode-backend\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-28T18:16:58.319Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\David\\Documents\\GitHub\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Program.cs",
               "RelativeDocumentMoniker": "monk-mode-backend\\Program.cs",
-              "ToolTip": "C:\\Users\\David\\Documents\\GitHub\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Program.cs",
+              "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Program.cs",
               "RelativeToolTip": "monk-mode-backend\\Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAD4AAAALAAAAAAAAAA==",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAgwFgAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T18:32:43.003Z"
+              "WhenOpened": "2025-03-24T22:28:55.125Z"
             }
           ]
         }
