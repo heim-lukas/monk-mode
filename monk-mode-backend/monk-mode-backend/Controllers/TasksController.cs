@@ -26,15 +26,14 @@ namespace monk_mode_backend.Controllers
         }
 
         // POST: api/tasks
-        // Erstellt eine neue Task
+        // Create a new task
         [HttpPost]
         public async Task<IActionResult> CreateTask([FromBody] CreateTaskDTO createDto)
         {
             if (createDto == null || string.IsNullOrWhiteSpace(createDto.Title))
                 return BadRequest("Title is required.");
 
-            // Wenn ein DueDate vorhanden ist und es in der Vergangenheit liegt,
-            // geben wir einen BadRequest zurück.
+            // Check if DueDate exists and is in the past
             if (createDto.DueDate.HasValue && createDto.DueDate.Value.Date < DateTime.Today)
             {
                 return BadRequest("Due Date must be today or in the future.");
@@ -58,7 +57,7 @@ namespace monk_mode_backend.Controllers
         }
 
         // GET: api/tasks
-        // Gibt alle Tasks des eingeloggten Users zurück
+        // Return all tasks for the logged-in user
         [HttpGet]
         public async Task<IActionResult> GetAllTasks()
         {
@@ -75,7 +74,7 @@ namespace monk_mode_backend.Controllers
         }
 
         // GET: api/tasks/{id}
-        // Gibt eine einzelne Task zurück
+        // Return a single task by id
         [HttpGet("{id}")]
         public async Task<IActionResult> GetTaskById(int id)
         {
@@ -93,7 +92,7 @@ namespace monk_mode_backend.Controllers
         }
 
         // PUT: api/tasks/{id}
-        // Aktualisiert eine Task, inklusive dem Abschluss oder Wiederöffnen
+        // Update a task (mark complete or reopen)
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateTask(int id, [FromBody] UpdateTaskDTO updateDto)
         {
@@ -109,30 +108,27 @@ namespace monk_mode_backend.Controllers
             if (task == null)
                 return NotFound();
 
-            // Vorherigen Status merken
+            // Save previous completed status
             bool wasCompleted = task.IsCompleted;
 
-            // Felder aktualisieren
+            // Update fields
             task.Title = updateDto.Title;
             task.Description = updateDto.Description;
             task.DueDate = updateDto.DueDate;
 
-            // Logik zum Aktualisieren des Abschlussstatus:
+            // Update complete status logic
             if (!wasCompleted && updateDto.IsCompleted)
             {
-                // Task wird abgeschlossen
                 task.IsCompleted = true;
                 task.CompletedAt = DateTime.Now;
             }
             else if (wasCompleted && !updateDto.IsCompleted)
             {
-                // Task wird wieder geöffnet
                 task.IsCompleted = false;
                 task.CompletedAt = null;
             }
             else
             {
-                // Keine Statusänderung, aber wir setzen den Wert dennoch
                 task.IsCompleted = updateDto.IsCompleted;
             }
 
@@ -143,7 +139,7 @@ namespace monk_mode_backend.Controllers
         }
 
         // DELETE: api/tasks/{id}
-        // Löscht eine Task
+        // Delete a task
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTask(int id)
         {
@@ -163,7 +159,7 @@ namespace monk_mode_backend.Controllers
         }
 
         // POST: api/tasks/{id}/link/{timeblockId}
-        // Verknüpft eine Task mit einem TimeBlock
+        // Link a task to a time block
         [HttpPost("{id}/link/{timeblockId}")]
         public async Task<IActionResult> LinkTask(int id, int timeblockId)
         {
@@ -171,7 +167,7 @@ namespace monk_mode_backend.Controllers
             if (user == null)
                 return Unauthorized();
 
-            // Prüfe, ob der TimeBlock existiert und dem User gehört
+            // Check if the time block exists and belongs to the user
             var timeBlock = await _dbContext.TimeBlocks
                 .FirstOrDefaultAsync(tb => tb.Id == timeblockId && tb.UserId == user.Id);
             if (timeBlock == null)
@@ -190,7 +186,7 @@ namespace monk_mode_backend.Controllers
         }
 
         // POST: api/tasks/{id}/unlink
-        // Entfernt die Verknüpfung zu einem TimeBlock
+        // Unlink a task from a time block
         [HttpPost("{id}/unlink")]
         public async Task<IActionResult> UnlinkTask(int id)
         {
