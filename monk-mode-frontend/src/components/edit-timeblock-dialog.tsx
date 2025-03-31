@@ -40,7 +40,30 @@ export const EditTimeBlockDialog: React.FC<EditTimeBlockDialogProps> = ({
     }));
   };
 
+  const validateTime = (time: string) => {
+    return /^([01]\d|2[0-3]):([0-5]\d):([0-5]\d)$/.test(time); // Enforce HH:mm:ss
+  };
+
+  const isStartBeforeEnd = (startTime: string, endTime: string) => {
+    return startTime < endTime; // Works since times are in HH:mm:ss format
+  };
+
   const handleSave = async () => {
+    setError(null); // Reset previous errors
+
+    if (
+      !validateTime(editedTimeBlock.startTime) ||
+      !validateTime(editedTimeBlock.endTime)
+    ) {
+      setError("Invalid time format. Use HH:mm:ss.");
+      return;
+    }
+
+    if (!isStartBeforeEnd(editedTimeBlock.startTime, editedTimeBlock.endTime)) {
+      setError("Start time must be earlier than end time.");
+      return;
+    }
+
     setLoading(true);
     const token = localStorage.getItem("token");
 
@@ -63,6 +86,10 @@ export const EditTimeBlockDialog: React.FC<EditTimeBlockDialogProps> = ({
     }
   };
 
+  const getTodayDate = (): string => {
+    return new Date().toISOString().split("T")[0];
+  };
+
   return (
     <Dialog open={open} onOpenChange={onClose}>
       <DialogContent>
@@ -80,6 +107,7 @@ export const EditTimeBlockDialog: React.FC<EditTimeBlockDialogProps> = ({
           <Input
             name="date"
             type="date"
+            min={getTodayDate()}
             value={editedTimeBlock.date}
             onChange={handleChange}
           />
@@ -87,13 +115,17 @@ export const EditTimeBlockDialog: React.FC<EditTimeBlockDialogProps> = ({
             name="startTime"
             value={editedTimeBlock.startTime}
             onChange={handleChange}
-            placeholder="Start Time"
+            placeholder="Start Time (HH:mm:ss)"
+            pattern="([01]\d|2[0-3]):([0-5]\d):([0-5]\d)"
+            title="Enter time in HH:mm:ss format"
           />
           <Input
             name="endTime"
             value={editedTimeBlock.endTime}
             onChange={handleChange}
-            placeholder="End Time"
+            placeholder="End Time (HH:mm:ss)"
+            pattern="([01]\d|2[0-3]):([0-5]\d):([0-5]\d)"
+            title="Enter time in HH:mm:ss format"
           />
           <div className="flex items-center">
             <input

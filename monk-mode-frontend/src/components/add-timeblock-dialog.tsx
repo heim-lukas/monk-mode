@@ -43,6 +43,21 @@ export const AddTimeBlockDialog: React.FC<AddTimeBlockDialogProps> = ({
   };
 
   const handleSave = async () => {
+    setError(null); // Reset previous errors
+
+    if (
+      !validateTime(timeBlock.startTime) ||
+      !validateTime(timeBlock.endTime)
+    ) {
+      setError("Invalid time format. Use HH:mm:ss.");
+      return;
+    }
+
+    if (!isStartBeforeEnd(timeBlock.startTime, timeBlock.endTime)) {
+      setError("Start time must be earlier than end time.");
+      return;
+    }
+
     setLoading(true);
     const token = localStorage.getItem("token");
 
@@ -55,6 +70,7 @@ export const AddTimeBlockDialog: React.FC<AddTimeBlockDialogProps> = ({
     try {
       const newBlock = await createTimeBlock(token, timeBlock);
       onSave(newBlock);
+      resetForm(); // reset form on save
       onClose();
     } catch (err) {
       setError(
@@ -63,6 +79,29 @@ export const AddTimeBlockDialog: React.FC<AddTimeBlockDialogProps> = ({
     } finally {
       setLoading(false);
     }
+  };
+
+  const resetForm = () => {
+    setTimeBlock({
+      title: "",
+      date: "",
+      startTime: "",
+      endTime: "",
+      isFocus: false,
+      tasks: [],
+    });
+  };
+
+  const validateTime = (time: string) => {
+    return /^([01]\d|2[0-3]):([0-5]\d):([0-5]\d)$/.test(time); // Enforce HH:mm:ss
+  };
+
+  const isStartBeforeEnd = (startTime: string, endTime: string) => {
+    return startTime < endTime; // Works since times are in HH:mm:ss format
+  };
+
+  const getTodayDate = (): string => {
+    return new Date().toISOString().split("T")[0];
   };
 
   return (
@@ -82,6 +121,7 @@ export const AddTimeBlockDialog: React.FC<AddTimeBlockDialogProps> = ({
           <Input
             name="date"
             type="date"
+            min={getTodayDate()}
             value={timeBlock.date}
             onChange={handleChange}
           />
@@ -89,13 +129,18 @@ export const AddTimeBlockDialog: React.FC<AddTimeBlockDialogProps> = ({
             name="startTime"
             value={timeBlock.startTime}
             onChange={handleChange}
-            placeholder="Start Time"
+            placeholder="Start Time (HH:mm:ss)"
+            pattern="([01]\d|2[0-3]):([0-5]\d):([0-5]\d)"
+            title="Enter time in HH:mm:ss format"
           />
+
           <Input
             name="endTime"
             value={timeBlock.endTime}
             onChange={handleChange}
-            placeholder="End Time"
+            placeholder="End Time (HH:mm:ss)"
+            pattern="([01]\d|2[0-3]):([0-5]\d):([0-5]\d)"
+            title="Enter time in HH:mm:ss format"
           />
           <div className="flex items-center">
             <input
