@@ -1,12 +1,11 @@
 {
   "Version": 1,
-  "Hash": "TTyUYjpkHLVwLIrfZtrIo9ZtoKDACmwUmvnCUVo5jRs=",
+  "Hash": "Kb6gp6WyFfECc9d7Z4SDbUJ+tkD2gQkrGiVTRdW6uYU=",
   "Source": "monk-mode-backend",
   "BasePath": "_content/monk-mode-backend",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": []
 }

@@ -4384,24 +4384,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\brian\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Lukas\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\monk-mode-backend.csproj",
+      "projectUniqueName": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\monk-mode-backend.csproj",
       "projectName": "monk-mode-backend",
-      "projectPath": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\monk-mode-backend.csproj",
-      "packagesPath": "C:\\Users\\brian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\obj\\",
+      "projectPath": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\monk-mode-backend.csproj",
+      "packagesPath": "C:\\Users\\Lukas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\brian\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Lukas\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4426,8 +4425,7 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.100"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -4495,7 +4493,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

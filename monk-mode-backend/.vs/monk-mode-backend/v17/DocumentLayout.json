@@ -1,113 +1,114 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\",
+  "WorkspaceRootPath": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\brian\\documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\application\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\application\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\brian\\documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\application\\friendshipservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\application\\friendshipservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\brian\\documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\application\\ifriendshipservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\application\\ifriendshipservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\brian\\documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\application\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\application\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\brian\\documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\application\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\application\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\brian\\documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\controllers\\authenticatecontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\controllers\\authenticatecontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\brian\\documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\controllers\\friendshipcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\controllers\\friendshipcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\controllers\\friendshipcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\brian\\documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\controllers\\timeblockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\application\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\application\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\application\\friendshipservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\application\\friendshipservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\application\\ifriendshipservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\application\\ifriendshipservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\application\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\application\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\application\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\application\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\controllers\\authenticatecontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\controllers\\authenticatecontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\controllers\\timeblockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\controllers\\timeblockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\brian\\documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\brian\\documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\domain\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\domain\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\domain\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\brian\\documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\domain\\friendship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\domain\\friendship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\domain\\friendship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\brian\\documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\domain\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\domain\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\domain\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\brian\\documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\domain\\timeblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\domain\\timeblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\domain\\timeblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\brian\\documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\brian\\documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\migrations\\20250324211005_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\migrations\\20250324211005_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\migrations\\20250324211005_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\brian\\documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\infrastructure\\monkmodedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\infrastructure\\monkmodedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\infrastructure\\monkmodedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\brian\\documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\models\\friendshipdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\models\\friendshipdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\models\\friendshipdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\brian\\documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\models\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\models\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\models\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\brian\\documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\models\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\models\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\models\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\brian\\documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\models\\responsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\models\\responsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\models\\responsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\brian\\documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\models\\timeblockdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\models\\timeblockdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\models\\timeblockdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\brian\\documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\models\\tokendto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\models\\tokendto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\models\\tokendto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\brian\\documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\models\\userprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\models\\userprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\models\\userprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\brian\\documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\brian\\documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\brian\\documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:1:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:1:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:2:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|c:\\users\\lukas\\documents\\01_projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:2:0:{88EDE73C-CAFF-4974-9410-A215CEF542BC}|monk-mode-backend\\monk-mode-backend.csproj|solutionrelative:monk-mode-backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -117,340 +118,321 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 6,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "JWTService.cs",
-              "DocumentMoniker": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Application\\JWTService.cs",
-              "RelativeDocumentMoniker": "monk-mode-backend\\Application\\JWTService.cs",
-              "ToolTip": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Application\\JWTService.cs",
-              "RelativeToolTip": "monk-mode-backend\\Application\\JWTService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T19:35:37.689Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ITokenService.cs",
-              "DocumentMoniker": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Application\\ITokenService.cs",
-              "RelativeDocumentMoniker": "monk-mode-backend\\Application\\ITokenService.cs",
-              "ToolTip": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Application\\ITokenService.cs",
-              "RelativeToolTip": "monk-mode-backend\\Application\\ITokenService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T19:35:36.806Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TimeBlockController.cs",
-              "DocumentMoniker": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Controllers\\TimeBlockController.cs",
-              "RelativeDocumentMoniker": "monk-mode-backend\\Controllers\\TimeBlockController.cs",
-              "ToolTip": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Controllers\\TimeBlockController.cs",
-              "RelativeToolTip": "monk-mode-backend\\Controllers\\TimeBlockController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T19:35:34.51Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Domain\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "monk-mode-backend\\Domain\\ApplicationUser.cs",
-              "ToolTip": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Domain\\ApplicationUser.cs",
-              "RelativeToolTip": "monk-mode-backend\\Domain\\ApplicationUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T19:35:32.293Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Friendship.cs",
-              "DocumentMoniker": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Domain\\Friendship.cs",
-              "RelativeDocumentMoniker": "monk-mode-backend\\Domain\\Friendship.cs",
-              "ToolTip": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Domain\\Friendship.cs",
-              "RelativeToolTip": "monk-mode-backend\\Domain\\Friendship.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T19:35:31.541Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
               "Title": "TimeBlock.cs",
-              "DocumentMoniker": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Domain\\TimeBlock.cs",
+              "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Domain\\TimeBlock.cs",
               "RelativeDocumentMoniker": "monk-mode-backend\\Domain\\TimeBlock.cs",
-              "ToolTip": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Domain\\TimeBlock.cs",
+              "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Domain\\TimeBlock.cs",
               "RelativeToolTip": "monk-mode-backend\\Domain\\TimeBlock.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T19:35:29.685Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-30T19:35:29.685Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
               "Title": "20250324211005_InitialCreate.cs",
-              "DocumentMoniker": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Migrations\\20250324211005_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Migrations\\20250324211005_InitialCreate.cs",
               "RelativeDocumentMoniker": "monk-mode-backend\\Migrations\\20250324211005_InitialCreate.cs",
-              "ToolTip": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Migrations\\20250324211005_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Migrations\\20250324211005_InitialCreate.cs",
               "RelativeToolTip": "monk-mode-backend\\Migrations\\20250324211005_InitialCreate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T19:35:24.513Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-30T19:35:24.513Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IFriendshipService.cs",
+              "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Application\\IFriendshipService.cs",
+              "RelativeDocumentMoniker": "monk-mode-backend\\Application\\IFriendshipService.cs",
+              "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Application\\IFriendshipService.cs",
+              "RelativeToolTip": "monk-mode-backend\\Application\\IFriendshipService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T10:48:35.759Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "IFriendshipService.cs",
-              "DocumentMoniker": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Application\\IFriendshipService.cs",
-              "RelativeDocumentMoniker": "monk-mode-backend\\Application\\IFriendshipService.cs",
-              "ToolTip": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Application\\IFriendshipService.cs",
-              "RelativeToolTip": "monk-mode-backend\\Application\\IFriendshipService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAnAAAAAAAAAA==",
+              "Title": "FriendshipService.cs",
+              "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Application\\FriendshipService.cs",
+              "RelativeDocumentMoniker": "monk-mode-backend\\Application\\FriendshipService.cs",
+              "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Application\\FriendshipService.cs",
+              "RelativeToolTip": "monk-mode-backend\\Application\\FriendshipService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T10:48:35.759Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-30T10:49:33.214Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FriendshipService.cs",
-              "DocumentMoniker": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Application\\FriendshipService.cs",
-              "RelativeDocumentMoniker": "monk-mode-backend\\Application\\FriendshipService.cs",
-              "ToolTip": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Application\\FriendshipService.cs",
-              "RelativeToolTip": "monk-mode-backend\\Application\\FriendshipService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T10:49:33.214Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "MappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Application\\Mappings\\MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Application\\Mappings\\MappingProfile.cs",
               "RelativeDocumentMoniker": "monk-mode-backend\\Application\\Mappings\\MappingProfile.cs",
-              "ToolTip": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Application\\Mappings\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Application\\Mappings\\MappingProfile.cs",
               "RelativeToolTip": "monk-mode-backend\\Application\\Mappings\\MappingProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-25T10:45:39.498Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "MonkModeDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Infrastructure\\MonkModeDbContext.cs",
-              "RelativeDocumentMoniker": "monk-mode-backend\\Infrastructure\\MonkModeDbContext.cs",
-              "ToolTip": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Infrastructure\\MonkModeDbContext.cs",
-              "RelativeToolTip": "monk-mode-backend\\Infrastructure\\MonkModeDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T12:00:13.744Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "FriendshipDTO.cs",
-              "DocumentMoniker": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\FriendshipDTO.cs",
-              "RelativeDocumentMoniker": "monk-mode-backend\\Models\\FriendshipDTO.cs",
-              "ToolTip": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\FriendshipDTO.cs",
-              "RelativeToolTip": "monk-mode-backend\\Models\\FriendshipDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T10:48:05.579Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "FriendshipController.cs",
-              "DocumentMoniker": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Controllers\\FriendshipController.cs",
+              "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Controllers\\FriendshipController.cs",
               "RelativeDocumentMoniker": "monk-mode-backend\\Controllers\\FriendshipController.cs",
-              "ToolTip": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Controllers\\FriendshipController.cs",
+              "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Controllers\\FriendshipController.cs",
               "RelativeToolTip": "monk-mode-backend\\Controllers\\FriendshipController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-30T10:50:43.972Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Friendship.cs",
+              "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Domain\\Friendship.cs",
+              "RelativeDocumentMoniker": "monk-mode-backend\\Domain\\Friendship.cs",
+              "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Domain\\Friendship.cs",
+              "RelativeToolTip": "monk-mode-backend\\Domain\\Friendship.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T19:35:31.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Domain\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "monk-mode-backend\\Domain\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Domain\\ApplicationUser.cs",
+              "RelativeToolTip": "monk-mode-backend\\Domain\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T19:35:32.293Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TimeBlockController.cs",
+              "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Controllers\\TimeBlockController.cs",
+              "RelativeDocumentMoniker": "monk-mode-backend\\Controllers\\TimeBlockController.cs",
+              "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Controllers\\TimeBlockController.cs",
+              "RelativeToolTip": "monk-mode-backend\\Controllers\\TimeBlockController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T19:35:34.51Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "ITokenService.cs",
+              "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Application\\ITokenService.cs",
+              "RelativeDocumentMoniker": "monk-mode-backend\\Application\\ITokenService.cs",
+              "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Application\\ITokenService.cs",
+              "RelativeToolTip": "monk-mode-backend\\Application\\ITokenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T19:35:36.806Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "JWTService.cs",
+              "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Application\\JWTService.cs",
+              "RelativeDocumentMoniker": "monk-mode-backend\\Application\\JWTService.cs",
+              "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Application\\JWTService.cs",
+              "RelativeToolTip": "monk-mode-backend\\Application\\JWTService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T19:35:37.689Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MonkModeDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Infrastructure\\MonkModeDbContext.cs",
+              "RelativeDocumentMoniker": "monk-mode-backend\\Infrastructure\\MonkModeDbContext.cs",
+              "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Infrastructure\\MonkModeDbContext.cs",
+              "RelativeToolTip": "monk-mode-backend\\Infrastructure\\MonkModeDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T12:00:13.744Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FriendshipDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\FriendshipDTO.cs",
+              "RelativeDocumentMoniker": "monk-mode-backend\\Models\\FriendshipDTO.cs",
+              "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\FriendshipDTO.cs",
+              "RelativeToolTip": "monk-mode-backend\\Models\\FriendshipDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T10:48:05.579Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "AuthenticateControllers.cs",
-              "DocumentMoniker": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Controllers\\AuthenticateControllers.cs",
+              "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Controllers\\AuthenticateControllers.cs",
               "RelativeDocumentMoniker": "monk-mode-backend\\Controllers\\AuthenticateControllers.cs",
-              "ToolTip": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Controllers\\AuthenticateControllers.cs",
+              "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Controllers\\AuthenticateControllers.cs",
               "RelativeToolTip": "monk-mode-backend\\Controllers\\AuthenticateControllers.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T22:47:25.45Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T22:47:25.45Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
               "Title": "ResponseDTO.cs",
-              "DocumentMoniker": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\ResponseDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\ResponseDTO.cs",
               "RelativeDocumentMoniker": "monk-mode-backend\\Models\\ResponseDTO.cs",
-              "ToolTip": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\ResponseDTO.cs",
+              "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\ResponseDTO.cs",
               "RelativeToolTip": "monk-mode-backend\\Models\\ResponseDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T17:08:26.425Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T17:08:26.425Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
               "Title": "TimeBlockDTO.cs",
-              "DocumentMoniker": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\TimeBlockDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\TimeBlockDTO.cs",
               "RelativeDocumentMoniker": "monk-mode-backend\\Models\\TimeBlockDTO.cs",
-              "ToolTip": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\TimeBlockDTO.cs",
+              "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\TimeBlockDTO.cs",
               "RelativeToolTip": "monk-mode-backend\\Models\\TimeBlockDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T17:08:27.432Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T17:08:27.432Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
               "Title": "TokenDTO.cs",
-              "DocumentMoniker": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\TokenDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\TokenDTO.cs",
               "RelativeDocumentMoniker": "monk-mode-backend\\Models\\TokenDTO.cs",
-              "ToolTip": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\TokenDTO.cs",
+              "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\TokenDTO.cs",
               "RelativeToolTip": "monk-mode-backend\\Models\\TokenDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T19:35:09.642Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-30T19:35:09.642Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Controllers\\UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "monk-mode-backend\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Controllers\\UserController.cs",
               "RelativeToolTip": "monk-mode-backend\\Controllers\\UserController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T12:14:54.155Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-30T12:14:54.155Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 22,
               "Title": "UserProfileDTO.cs",
-              "DocumentMoniker": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\UserProfileDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\UserProfileDTO.cs",
               "RelativeDocumentMoniker": "monk-mode-backend\\Models\\UserProfileDTO.cs",
-              "ToolTip": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\UserProfileDTO.cs",
+              "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\UserProfileDTO.cs",
               "RelativeToolTip": "monk-mode-backend\\Models\\UserProfileDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T12:15:12.842Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-30T12:15:12.842Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
               "Title": "RegisterDTO.cs",
-              "DocumentMoniker": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\RegisterDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\RegisterDTO.cs",
               "RelativeDocumentMoniker": "monk-mode-backend\\Models\\RegisterDTO.cs",
-              "ToolTip": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\RegisterDTO.cs",
+              "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\RegisterDTO.cs",
               "RelativeToolTip": "monk-mode-backend\\Models\\RegisterDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T17:08:24.946Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T17:08:24.946Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
               "Title": "LoginDTO.cs",
-              "DocumentMoniker": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\LoginDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\LoginDTO.cs",
               "RelativeDocumentMoniker": "monk-mode-backend\\Models\\LoginDTO.cs",
-              "ToolTip": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\LoginDTO.cs",
+              "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Models\\LoginDTO.cs",
               "RelativeToolTip": "monk-mode-backend\\Models\\LoginDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T17:08:13.883Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T17:08:13.883Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "Task.cs",
-              "DocumentMoniker": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Domain\\Task.cs",
+              "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Domain\\Task.cs",
               "RelativeDocumentMoniker": "monk-mode-backend\\Domain\\Task.cs",
-              "ToolTip": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Domain\\Task.cs",
+              "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Domain\\Task.cs",
               "RelativeToolTip": "monk-mode-backend\\Domain\\Task.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T10:44:58.07Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T10:44:58.07Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
               "Title": "NotificationHub.cs",
-              "DocumentMoniker": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Hubs\\NotificationHub.cs",
+              "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Hubs\\NotificationHub.cs",
               "RelativeDocumentMoniker": "monk-mode-backend\\Hubs\\NotificationHub.cs",
-              "ToolTip": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Hubs\\NotificationHub.cs",
+              "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Hubs\\NotificationHub.cs",
               "RelativeToolTip": "monk-mode-backend\\Hubs\\NotificationHub.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T10:47:17.864Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-30T10:47:17.864Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 23,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Program.cs",
               "RelativeDocumentMoniker": "monk-mode-backend\\Program.cs",
-              "ToolTip": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Program.cs",
+              "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Program.cs",
               "RelativeToolTip": "monk-mode-backend\\Program.cs",
               "ViewState": "AgIAAF0AAAAAAAAAAAAAAHAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T11:52:40.306Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-30T11:52:40.306Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 24,
               "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Properties\\launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "monk-mode-backend\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\Properties\\launchSettings.json",
               "RelativeToolTip": "monk-mode-backend\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-25T17:31:34.871Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T17:31:34.871Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 25,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\appsettings.json",
               "RelativeDocumentMoniker": "monk-mode-backend\\appsettings.json",
-              "ToolTip": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\appsettings.json",
+              "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\appsettings.json",
               "RelativeToolTip": "monk-mode-backend\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -461,9 +443,9 @@
               "DocumentIndex": 26,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\appsettings.json",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\appsettings.json",
+              "RelativeDocumentMoniker": "monk-mode-backend\\appsettings.json",
               "ToolTip": "C:\\Users\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\appsettings.json",
-              "RelativeToolTip": "..\\..\\..\\..\\Lukas\\Documents\\01_Projects\\monk-mode\\monk-mode-backend\\monk-mode-backend\\appsettings.json",
+              "RelativeToolTip": "monk-mode-backend\\appsettings.json",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-03-24T23:26:27.092Z"
             }
