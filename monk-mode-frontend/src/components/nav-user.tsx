@@ -1,5 +1,6 @@
 import { LogOut, UserRound } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -12,10 +13,25 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar";
+import { getUserProfile, UserProfile } from "@/services/profile";
 
 export function NavUser() {
   const { isMobile } = useSidebar();
   const navigate = useNavigate();
+  const [user, setUser] = useState<UserProfile | null>(null);
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      try {
+        const userData = await getUserProfile();
+        setUser(userData);
+      } catch (error) {
+        console.error("Failed to load user profile:", error);
+      }
+    };
+
+    fetchUser();
+  }, []);
 
   const handleLogout = () => {
     localStorage.removeItem("token");
@@ -35,8 +51,8 @@ export function NavUser() {
                 <UserRound className="h-4 w-4" />
               </div>
               <div className="grid flex-1 text-left text-sm leading-tight">
-                <span className="truncate font-semibold">User Name</span>
-                <span className="truncate text-xs">user@example.com</span>
+                <span className="truncate font-semibold">{user?.username || "Loading..."}</span>
+                <span className="truncate text-xs">{user?.email || "Loading..."}</span>
               </div>
             </SidebarMenuButton>
           </DropdownMenuTrigger>

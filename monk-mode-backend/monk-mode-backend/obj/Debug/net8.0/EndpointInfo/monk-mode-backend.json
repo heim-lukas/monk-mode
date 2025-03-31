@@ -84,6 +84,12 @@
         }
       }
     },
+<<<<<<< HEAD
+    "/api/Friendship": {
+      "get": {
+        "tags": [
+          "Friendship"
+=======
     "/api/Tasks": {
       "post": {
         "tags": [
@@ -117,6 +123,7 @@
       "get": {
         "tags": [
           "Tasks"
+>>>>>>> main
         ],
         "responses": {
           "200": {
@@ -125,6 +132,12 @@
         }
       }
     },
+<<<<<<< HEAD
+    "/api/Friendship/requests": {
+      "get": {
+        "tags": [
+          "Friendship"
+=======
     "/api/Tasks/{id}": {
       "get": {
         "tags": [
@@ -140,12 +153,21 @@
               "format": "int32"
             }
           }
+>>>>>>> main
         ],
         "responses": {
           "200": {
             "description": "OK"
           }
         }
+<<<<<<< HEAD
+      }
+    },
+    "/api/Friendship/send": {
+      "post": {
+        "tags": [
+          "Friendship"
+=======
       },
       "put": {
         "tags": [
@@ -161,22 +183,35 @@
               "format": "int32"
             }
           }
+>>>>>>> main
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
+<<<<<<< HEAD
+                "$ref": "#/components/schemas/FriendRequestDTO"
+=======
                 "$ref": "#/components/schemas/UpdateTaskDTO"
+>>>>>>> main
               }
             },
             "text/json": {
               "schema": {
+<<<<<<< HEAD
+                "$ref": "#/components/schemas/FriendRequestDTO"
+=======
                 "$ref": "#/components/schemas/UpdateTaskDTO"
+>>>>>>> main
               }
             },
             "application/*+json": {
               "schema": {
+<<<<<<< HEAD
+                "$ref": "#/components/schemas/FriendRequestDTO"
+=======
                 "$ref": "#/components/schemas/UpdateTaskDTO"
+>>>>>>> main
               }
             }
           }
@@ -186,10 +221,19 @@
             "description": "OK"
           }
         }
+<<<<<<< HEAD
+      }
+    },
+    "/api/Friendship/accept/{id}": {
+      "post": {
+        "tags": [
+          "Friendship"
+=======
       },
       "delete": {
         "tags": [
           "Tasks"
+>>>>>>> main
         ],
         "parameters": [
           {
@@ -209,10 +253,17 @@
         }
       }
     },
+<<<<<<< HEAD
+    "/api/Friendship/reject/{id}": {
+      "post": {
+        "tags": [
+          "Friendship"
+=======
     "/api/Tasks/{id}/link/{timeblockId}": {
       "post": {
         "tags": [
           "Tasks"
+>>>>>>> main
         ],
         "parameters": [
           {
@@ -223,6 +274,8 @@
               "type": "integer",
               "format": "int32"
             }
+<<<<<<< HEAD
+=======
           },
           {
             "name": "timeblockId",
@@ -232,6 +285,7 @@
               "type": "integer",
               "format": "int32"
             }
+>>>>>>> main
           }
         ],
         "responses": {
@@ -241,10 +295,17 @@
         }
       }
     },
+<<<<<<< HEAD
+    "/api/Friendship/{id}": {
+      "delete": {
+        "tags": [
+          "Friendship"
+=======
     "/api/Tasks/{id}/unlink": {
       "post": {
         "tags": [
           "Tasks"
+>>>>>>> main
         ],
         "parameters": [
           {
@@ -388,10 +449,33 @@
           }
         }
       }
+<<<<<<< HEAD
+    },
+    "/api/User/profile": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+=======
+>>>>>>> main
     }
   },
   "components": {
     "schemas": {
+<<<<<<< HEAD
+      "FriendRequestDTO": {
+        "type": "object",
+        "properties": {
+          "friendId": {
+            "type": "string",
+            "nullable": true
+=======
       "CreateTaskDTO": {
         "type": "object",
         "properties": {
@@ -407,6 +491,7 @@
             "type": "string",
             "format": "date-time",
             "nullable": true
+>>>>>>> main
           }
         },
         "additionalProperties": false
@@ -507,6 +592,8 @@
           }
         },
         "additionalProperties": false
+<<<<<<< HEAD
+=======
       },
       "UpdateTaskDTO": {
         "type": "object",
@@ -529,6 +616,7 @@
           }
         },
         "additionalProperties": false
+>>>>>>> main
       }
     },
     "securitySchemes": {

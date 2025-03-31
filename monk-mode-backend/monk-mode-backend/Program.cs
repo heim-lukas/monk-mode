@@ -6,6 +6,7 @@ using Microsoft.OpenApi.Models;
 using monk_mode_backend.Application;
 using monk_mode_backend.Application.Mappings;
 using monk_mode_backend.Domain;
+using monk_mode_backend.Hubs;
 using monk_mode_backend.Infrastructure;
 using System.Text;
 
@@ -32,12 +33,16 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options => {
     options.Password.RequireLowercase = false;
 }).AddEntityFrameworkStores<MonkModeDbContext>();
 
+builder.Services.AddSignalR();
+builder.Services.AddScoped<IFriendshipService, FriendshipService>();
+
 builder.Services.AddAuthentication(a => {
     a.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
     a.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
     a.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 }).AddJwtBearer(opt => {
-    opt.TokenValidationParameters = new TokenValidationParameters​ {
+    opt.TokenValidationParameters = new TokenValidationParameters​
+    {
         IssuerSigningKey = new SymmetricSecurityKey(
             Encoding.ASCII.GetBytes(
                 builder.Configuration.GetSection("JwtSettings")["Secret"]!
@@ -47,11 +52,29 @@ builder.Services.AddAuthentication(a => {
         RequireExpirationTime = false,
         ValidateLifetime = true
     };
+
+    // JWT validation für SignalR
+    opt.Events = new JwtBearerEvents
+    {
+        OnMessageReceived = context =>
+        {
+            var accessToken = context.Request.Query["access_token"];
+            var path = context.HttpContext.Request.Path;
+
+            if (!string.IsNullOrEmpty(accessToken) && path.StartsWithSegments("/hubs"))
+            {
+                context.Token = accessToken;
+            }
+
+            return System.Threading.Tasks.Task.CompletedTask; // Fully qualify Task
+        }
+    };
 });
 
 builder.Services.AddSwaggerGen(opt =>
 {
-    opt.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme() {
+    opt.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
+    {
         Name = "Authorization",
         Type = SecuritySchemeType.ApiKey,
         Scheme = "Bearer",
@@ -89,7 +112,8 @@ builder.Services.AddCors(options => {
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment()) {
+if (app.Environment.IsDevelopment())
+{
     app.UseSwagger();
     app.UseSwaggerUI();
 }
@@ -98,6 +122,9 @@ app.UseCors("AllowReactApp");
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
+
+// Map SignalR hub
+app.MapHub<NotificationHub>("/hubs/notifications");
 
 app.MapControllers();
 
