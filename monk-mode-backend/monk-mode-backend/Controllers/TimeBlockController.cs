@@ -53,6 +53,7 @@ namespace monk_mode_backend.Controllers {
 
             var timeBlocks = await _dbContext.TimeBlocks
                 .Where(tb => tb.UserId == user.Id)
+                .Include(tb => tb.Tasks)
                 .ToListAsync();
 
             var timeBlockDTOs = _mapper.Map<List<TimeBlockDTO>>(timeBlocks); // Map list of entities to DTOs
@@ -110,15 +111,26 @@ namespace monk_mode_backend.Controllers {
                 return Unauthorized();
 
             var timeBlock = await _dbContext.TimeBlocks
+                .Include(tb => tb.Tasks)  // Include linked tasks
                 .FirstOrDefaultAsync(tb => tb.UserId == user.Id && tb.Id == id);
 
             if (timeBlock == null)
                 return NotFound();
 
+            // Unlink tasks if any are linked
+            if (timeBlock.Tasks.Any()) {
+                foreach (var task in timeBlock.Tasks) {
+                    task.TimeBlockId = null;  // Unlink the task
+                }
+            }
+
+            // Remove the time block
             _dbContext.TimeBlocks.Remove(timeBlock);
+
+            // Save all changes in a single transaction
             await _dbContext.SaveChangesAsync();
 
-            return NoContent();  // 204 No Content
+            return NoContent();
         }
     }
 }

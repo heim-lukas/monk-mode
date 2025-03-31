@@ -1,54 +1,35 @@
 import React, { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
+  DialogFooter,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { updateTimeBlock } from "@/services/timeblocks";
 import { TimeBlock } from "@/types/types";
-import { updateTimeBlock, createTimeBlock } from "@/services/timeblocks";
 
-interface TimeBlockDataDialogProps {
+interface EditTimeBlockDialogProps {
   open: boolean;
   onClose: () => void;
   onSave: (updatedBlock: TimeBlock) => void;
-  timeBlock: TimeBlock | null;
+  timeBlock: TimeBlock;
 }
 
-export const TimeBlockDataDialog: React.FC<TimeBlockDataDialogProps> = ({
+export const EditTimeBlockDialog: React.FC<EditTimeBlockDialogProps> = ({
   open,
   onClose,
   onSave,
   timeBlock,
 }) => {
-  const [editedTimeBlock, setEditedTimeBlock] = useState<
-    Omit<TimeBlock, "id"> & { id?: string }
-  >({
-    title: "",
-    date: "",
-    startTime: "",
-    endTime: "",
-    isFocus: false,
-  });
+  const [editedTimeBlock, setEditedTimeBlock] = useState(timeBlock);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (timeBlock) {
-      setEditedTimeBlock({ ...timeBlock });
-    } else {
-      setEditedTimeBlock({
-        title: "",
-        date: "",
-        startTime: "",
-        endTime: "",
-        isFocus: false,
-      });
-    }
+    setEditedTimeBlock(timeBlock);
   }, [timeBlock]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -70,19 +51,13 @@ export const TimeBlockDataDialog: React.FC<TimeBlockDataDialogProps> = ({
     }
 
     try {
-      let savedBlock: TimeBlock;
-      if (editedTimeBlock.id) {
-        await updateTimeBlock(token, editedTimeBlock);
-        savedBlock = editedTimeBlock;
-      } else {
-        const { id, ...newBlockData } = editedTimeBlock;
-        savedBlock = await createTimeBlock(token, newBlockData);
-      }
-
-      onSave(savedBlock); // ✅ Pass the updated block
+      await updateTimeBlock(token, editedTimeBlock);
+      onSave(editedTimeBlock);
       onClose();
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Failed to save changes.");
+      setError(
+        err instanceof Error ? err.message : "Failed to update time block."
+      );
     } finally {
       setLoading(false);
     }
@@ -92,14 +67,7 @@ export const TimeBlockDataDialog: React.FC<TimeBlockDataDialogProps> = ({
     <Dialog open={open} onOpenChange={onClose}>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>
-            {editedTimeBlock.id ? "Edit Time Block" : "New Time Block"}
-          </DialogTitle>
-          <DialogDescription>
-            {editedTimeBlock.id
-              ? "Update the details of your time block."
-              : "Create a new time block entry."}
-          </DialogDescription>
+          <DialogTitle>Edit Time Block</DialogTitle>
         </DialogHeader>
         {error && <div className="text-red-500">{error}</div>}
         <div className="space-y-4">
@@ -107,34 +75,26 @@ export const TimeBlockDataDialog: React.FC<TimeBlockDataDialogProps> = ({
             name="title"
             value={editedTimeBlock.title}
             onChange={handleChange}
-            placeholder="Enter title"
-            className="w-full"
+            placeholder="Title"
           />
-
           <Input
             name="date"
+            type="date"
             value={editedTimeBlock.date}
             onChange={handleChange}
-            type="date"
-            className="w-full"
           />
-
           <Input
             name="startTime"
             value={editedTimeBlock.startTime}
             onChange={handleChange}
-            placeholder="Enter start time (HH:MM)"
-            className="w-full"
+            placeholder="Start Time"
           />
-
           <Input
             name="endTime"
             value={editedTimeBlock.endTime}
             onChange={handleChange}
-            placeholder="Enter end time (HH:MM)"
-            className="w-full"
+            placeholder="End Time"
           />
-
           <div className="flex items-center">
             <input
               type="checkbox"
@@ -144,17 +104,31 @@ export const TimeBlockDataDialog: React.FC<TimeBlockDataDialogProps> = ({
             />
             <span className="ml-2">Is Focus</span>
           </div>
+
+          {/* Task Selection */}
+          {editedTimeBlock.tasks.length > 0 && (
+            <div className="mt-4">
+              <h3 className="text-lg font-semibold">Tasks</h3>
+              <ul className="border rounded-lg p-2 mt-2 space-y-2">
+                {editedTimeBlock.tasks.map((task) => (
+                  <li
+                    key={task.id}
+                    className="p-2 border rounded-md flex justify-between"
+                  >
+                    <span>{task.title}</span>
+                    <input type="checkbox" checked={true} readOnly />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
         <DialogFooter>
           <Button variant="outline" onClick={onClose} disabled={loading}>
             Cancel
           </Button>
           <Button onClick={handleSave} disabled={loading}>
-            {loading
-              ? "Saving..."
-              : editedTimeBlock.id
-              ? "Save Changes"
-              : "Create"}
+            {loading ? "Saving..." : "Save Changes"}
           </Button>
         </DialogFooter>
       </DialogContent>
