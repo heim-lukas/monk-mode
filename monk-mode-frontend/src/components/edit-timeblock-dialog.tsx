@@ -33,6 +33,7 @@ export const EditTimeBlockDialog: React.FC<EditTimeBlockDialogProps> = ({
 
   useEffect(() => {
     setEditedTimeBlock(timeBlock);
+    setSelectedTaskIds(timeBlock.tasks.map((task) => task.id));
     fetchIncompleteTasks();
   }, [timeBlock, open]);
 
