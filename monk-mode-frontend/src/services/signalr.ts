@@ -2,14 +2,21 @@ import * as signalR from "@microsoft/signalr";
 import { API_BASE_URL } from "@/config/api";
 
 class SignalRService {
-  private hubConnection: signalR.HubConnection | null = null;
-  private connectionPromise: Promise<void> | null = null;
-
-  // Initialize and start the connection
+  public hubConnection: signalR.HubConnection | null = null;
+  
   public async startConnection(): Promise<void> {
-    if (this.hubConnection && 
-        this.hubConnection.state === signalR.HubConnectionState.Connected) {
-      return;
+    if (this.hubConnection) {
+      if (this.hubConnection.state === signalR.HubConnectionState.Connected) {
+        console.log("SignalR already connected");
+        return;
+      }
+      
+      try {
+        await this.hubConnection.stop();
+        console.log("Stopped existing SignalR connection");
+      } catch (err) {
+        console.error("Error stopping existing connection:", err);
+      }
     }
 
     const token = localStorage.getItem("token");
@@ -17,55 +24,33 @@ class SignalRService {
       throw new Error("No authentication token found");
     }
 
+    // Create a new connection
     this.hubConnection = new signalR.HubConnectionBuilder()
-      .withUrl(`${API_BASE_URL}/hubs/notifications?access_token=${token}`)
+      .withUrl(`${API_BASE_URL}hubs/notifications?access_token=${token}`)
       .withAutomaticReconnect()
       .build();
 
-    this.connectionPromise = this.hubConnection.start();
-    
+    // Start the connection
     try {
-      await this.connectionPromise;
-      console.log("SignalR connection established");
-    } catch (error) {
-      console.error("Error establishing SignalR connection:", error);
-      throw error;
+      await this.hubConnection.start();
+      console.log("SignalR connection started successfully");
+    } catch (err) {
+      console.error("Error starting SignalR connection:", err);
+      this.hubConnection = null;
+      throw err;
     }
   }
 
-  // Register event handlers
-  public onFriendRequest(callback: (userId: string, username: string) => void): void {
-    if (!this.hubConnection) {
-      console.error("Hub connection not initialized");
-      return;
-    }
-
-    this.hubConnection.on("ReceiveFriendRequest", callback);
-  }
-
-  public onFriendRequestAccepted(callback: (userId: string) => void): void {
-    if (!this.hubConnection) {
-      console.error("Hub connection not initialized");
-      return;
-    }
-
-    this.hubConnection.on("FriendRequestAccepted", callback);
-  }
-
-  public onFriendRequestRejected(callback: (userId: string) => void): void {
-    if (!this.hubConnection) {
-      console.error("Hub connection not initialized");
-      return;
-    }
-
-    this.hubConnection.on("FriendRequestRejected", callback);
-  }
-
-  // Disconnect the hub
   public async stopConnection(): Promise<void> {
     if (this.hubConnection) {
-      await this.hubConnection.stop();
-      console.log("SignalR connection stopped");
+      try {
+        await this.hubConnection.stop();
+        console.log("SignalR connection stopped");
+      } catch (err) {
+        console.error("Error stopping SignalR connection:", err);
+      } finally {
+        this.hubConnection = null;
+      }
     }
   }
 }

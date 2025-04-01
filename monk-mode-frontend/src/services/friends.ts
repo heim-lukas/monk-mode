@@ -23,7 +23,7 @@ export async function getFriends(): Promise<Friendship[]> {
   }
 
   try {
-    const response = await fetch(`${API_BASE_URL}/Friendship`, {
+    const response = await fetch(`${API_BASE_URL}api/Friendship`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -51,7 +51,7 @@ export async function getFriendRequests(): Promise<Friendship[]> {
   }
 
   try {
-    const response = await fetch(`${API_BASE_URL}/Friendship/requests`, {
+    const response = await fetch(`${API_BASE_URL}api/Friendship/requests`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -71,6 +71,34 @@ export async function getFriendRequests(): Promise<Friendship[]> {
   }
 }
 
+// Get sent friend requests
+export async function getSentFriendRequests(): Promise<Friendship[]> {
+  const token = localStorage.getItem("token");
+  if (!token) {
+    throw new Error("No authentication token found");
+  }
+
+  try {
+    const response = await fetch(`${API_BASE_URL}api/Friendship/sent`, {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!response.ok) {
+      const errorData = await response.text();
+      throw new Error(errorData || "Failed to fetch sent friend requests");
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error("Error fetching sent friend requests:", error);
+    throw error;
+  }
+}
+
 // Send friend request
 export async function sendFriendRequest(friendId: string): Promise<FriendshipResponse> {
   const token = localStorage.getItem("token");
@@ -79,7 +107,7 @@ export async function sendFriendRequest(friendId: string): Promise<FriendshipRes
   }
 
   try {
-    const response = await fetch(`${API_BASE_URL}/Friendship/send`, {
+    const response = await fetch(`${API_BASE_URL}api/Friendship/send`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -109,7 +137,7 @@ export async function acceptFriendRequest(friendshipId: number): Promise<Friends
   }
 
   try {
-    const response = await fetch(`${API_BASE_URL}/Friendship/accept/${friendshipId}`, {
+    const response = await fetch(`${API_BASE_URL}api/Friendship/accept/${friendshipId}`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -138,7 +166,7 @@ export async function rejectFriendRequest(friendshipId: number): Promise<Friends
   }
 
   try {
-    const response = await fetch(`${API_BASE_URL}/Friendship/reject/${friendshipId}`, {
+    const response = await fetch(`${API_BASE_URL}api/Friendship/reject/${friendshipId}`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -167,7 +195,7 @@ export async function removeFriend(friendshipId: number): Promise<{ status: stri
   }
 
   try {
-    const response = await fetch(`${API_BASE_URL}/Friendship/${friendshipId}`, {
+    const response = await fetch(`${API_BASE_URL}api/Friendship/${friendshipId}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${token}`,

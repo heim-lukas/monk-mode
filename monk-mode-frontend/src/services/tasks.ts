@@ -23,7 +23,7 @@ export interface CreateTaskDTO {
 export async function getAllTasks(): Promise<Task[]> {
   const token = localStorage.getItem("token");
 
-  const response = await fetch(`${API_BASE_URL}/tasks`, {
+  const response = await fetch(`${API_BASE_URL}api/tasks`, {
     method: "GET",
     headers: {
       Authorization: `Bearer ${token}`,
@@ -59,7 +59,7 @@ export async function getIncompleteTasks(): Promise<Task[]> {
 export async function createTask(data: CreateTaskDTO): Promise<Task> {
   const token = localStorage.getItem("token");
 
-  const response = await fetch(`${API_BASE_URL}/tasks`, {
+  const response = await fetch(`${API_BASE_URL}api/tasks`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -82,7 +82,7 @@ export async function updateTask(
 ): Promise<void> {
   const token = localStorage.getItem("token");
 
-  const response = await fetch(`${API_BASE_URL}/tasks/${taskId}`, {
+  const response = await fetch(`${API_BASE_URL}api/tasks/${taskId}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -100,7 +100,7 @@ export async function updateTask(
 export async function deleteTask(taskId: number): Promise<void> {
   const token = localStorage.getItem("token");
 
-  const response = await fetch(`${API_BASE_URL}/tasks/${taskId}`, {
+  const response = await fetch(`${API_BASE_URL}api/tasks/${taskId}`, {
     method: "DELETE",
     headers: {
       Authorization: `Bearer ${token}`,

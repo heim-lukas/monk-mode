@@ -104,5 +104,16 @@ namespace monk_mode_backend.Controllers
 
             return Ok(new { Status = "Success", Message = "Friend removed successfully." });
         }
+
+        [HttpGet("sent")]
+        public async Task<IActionResult> GetSentFriendRequests()
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+                return Unauthorized();
+
+            var sentRequests = await _friendshipService.GetSentFriendRequestsAsync(user.Id);
+            return Ok(sentRequests);
+        }
     }
 }
