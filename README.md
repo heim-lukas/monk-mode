@@ -5,7 +5,7 @@ Monk Mode is a full-stack productivity app built with React (Vite) on the fronte
 ## Features
 - Add and manage time blocks
 - Create tasks and link them to time blocks
-- Add friends and view their profiles
+- Connect with friends
 - User authentication and profile management
 
 ## Tech Stack
