@@ -7,6 +7,7 @@ namespace monk_mode_backend.Application
     {
         Task<IEnumerable<FriendshipDTO>> GetFriendshipsAsync(string userId);
         Task<IEnumerable<FriendshipDTO>> GetFriendRequestsAsync(string userId);
+        Task<IEnumerable<FriendshipDTO>> GetSentFriendRequestsAsync(string userId);
         Task<FriendshipResponseDTO> SendFriendRequestAsync(string userId, string friendId);
         Task<FriendshipResponseDTO> AcceptFriendRequestAsync(string userId, int friendshipId);
         Task<FriendshipResponseDTO> RejectFriendRequestAsync(string userId, int friendshipId);

@@ -13,7 +13,7 @@ export async function getUserProfile(): Promise<UserProfile> {
   }
 
   try {
-    const response = await fetch(`${API_BASE_URL}/User/profile`, {
+    const response = await fetch(`${API_BASE_URL}api/User/profile`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,

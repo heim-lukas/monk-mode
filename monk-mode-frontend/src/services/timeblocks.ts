@@ -8,7 +8,7 @@ interface ErrorResponse {
 
 export async function getTimeBlocks(token: string): Promise<TimeBlock[]> {
   try {
-    const response = await fetch(`${API_BASE_URL}/TimeBlock`, {
+    const response = await fetch(`${API_BASE_URL}api/TimeBlock`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -34,7 +34,7 @@ export async function getTimeBlockById(
   id: string | number
 ): Promise<TimeBlock> {
   try {
-    const response = await fetch(`${API_BASE_URL}/TimeBlock/${id}`, {
+    const response = await fetch(`${API_BASE_URL}api/TimeBlock/${id}`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -60,7 +60,7 @@ export async function createTimeBlock(
   timeBlock: TimeBlock
 ): Promise<TimeBlock> {
   try {
-    const response = await fetch(`${API_BASE_URL}/TimeBlock`, {
+    const response = await fetch(`${API_BASE_URL}api/TimeBlock`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -91,7 +91,7 @@ export async function updateTimeBlock(
   timeBlock: TimeBlock
 ): Promise<TimeBlock | null> {
   try {
-    const response = await fetch(`${API_BASE_URL}/TimeBlock/${timeBlock.id}`, {
+    const response = await fetch(`${API_BASE_URL}api/TimeBlock/${timeBlock.id}`, {
       method: "PUT",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -133,7 +133,7 @@ export async function deleteTimeBlock(
   id: string
 ): Promise<void> {
   try {
-    const response = await fetch(`${API_BASE_URL}/TimeBlock/${id}`, {
+    const response = await fetch(`${API_BASE_URL}api/TimeBlock/${id}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${token}`,

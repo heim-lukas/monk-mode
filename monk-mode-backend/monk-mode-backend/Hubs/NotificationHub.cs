@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿// Hubs/NotificationHub.cs
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.SignalR;
+using Microsoft.Extensions.Logging;
+using System;
 using System.Threading.Tasks;
 
 namespace monk_mode_backend.Hubs
@@ -7,22 +10,23 @@ namespace monk_mode_backend.Hubs
     [Authorize]
     public class NotificationHub : Hub
     {
-        public async Task<System.Threading.Tasks.Task> SendFriendRequest(string receiverId, string message)
+        private readonly ILogger<NotificationHub> _logger;
+
+        public NotificationHub(ILogger<NotificationHub> logger)
         {
-            await Clients.User(receiverId).SendAsync("ReceiveFriendRequest", Context.UserIdentifier, message);
-            return System.Threading.Tasks.Task.CompletedTask;
+            _logger = logger;
         }
 
-        public async Task<System.Threading.Tasks.Task> SendFriendRequestAccepted(string receiverId)
+        public override async Task OnConnectedAsync()
         {
-            await Clients.User(receiverId).SendAsync("FriendRequestAccepted", Context.UserIdentifier);
-            return System.Threading.Tasks.Task.CompletedTask;
+            _logger.LogInformation($"User connected to NotificationHub: {Context.UserIdentifier}");
+            await base.OnConnectedAsync();
         }
 
-        public async Task<System.Threading.Tasks.Task> SendFriendRequestRejected(string receiverId)
+        public override async Task OnDisconnectedAsync(Exception exception)
         {
-            await Clients.User(receiverId).SendAsync("FriendRequestRejected", Context.UserIdentifier);
-            return System.Threading.Tasks.Task.CompletedTask;
+            _logger.LogInformation($"User disconnected from NotificationHub: {Context.UserIdentifier}. Exception: {exception?.Message}");
+            await base.OnDisconnectedAsync(exception);
         }
     }
 }

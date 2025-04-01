@@ -1,22 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Friendship, getFriends, removeFriend } from "@/services";
+import { signalRService } from "@/services";
 
-interface FriendListProps {
-  onFriendRemoved: () => void;
-}
-
-export function FriendList({ onFriendRemoved }: FriendListProps) {
+export function FriendList() {
   const [friends, setFriends] = useState<Friendship[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
 
-  useEffect(() => {
-    loadFriends();
-  }, []);
-
-  const loadFriends = async () => {
+  const loadFriends = useCallback(async () => {
     setIsLoading(true);
     setError("");
 
@@ -32,13 +25,41 @@ export function FriendList({ onFriendRemoved }: FriendListProps) {
     } finally {
       setIsLoading(false);
     }
-  };
+  }, []);
+
+  useEffect(() => {
+    loadFriends();
+
+    const setupRealtime = async () => {
+      try {
+        await signalRService.startConnection();
+        
+        if (signalRService.hubConnection) {
+          console.log("Setting up realtime for friend list");
+          
+          signalRService.hubConnection.on("FriendRequestAccepted", () => {
+            console.log("Friend request accepted event in FriendList");
+            loadFriends();
+          });
+        }
+      } catch (error) {
+        console.error("Error setting up realtime for friend list:", error);
+      }
+    };
+    
+    setupRealtime();
+    
+    return () => {
+      if (signalRService.hubConnection) {
+        signalRService.hubConnection.off("FriendRequestAccepted");
+      }
+    };
+  }, [loadFriends]);
 
   const handleRemoveFriend = async (id: number) => {
     try {
       await removeFriend(id);
-      setFriends(friends.filter(friend => friend.id !== id));
-      onFriendRemoved();
+      await loadFriends();
     } catch (err) {
       if (err instanceof Error) {
         setError(err.message);
@@ -50,8 +71,16 @@ export function FriendList({ onFriendRemoved }: FriendListProps) {
 
   return (
     <Card>
-      <CardHeader>
-        <CardTitle>Friends</CardTitle>
+      <CardHeader className="flex flex-row items-center justify-between">
+        <CardTitle>Friends ({friends.length})</CardTitle>
+        <Button 
+          variant="outline" 
+          size="sm" 
+          onClick={loadFriends}
+          disabled={isLoading}
+        >
+          {isLoading ? "Loading..." : "Refresh"}
+        </Button>
       </CardHeader>
       <CardContent>
         {isLoading && <p>Loading friends...</p>}

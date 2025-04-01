@@ -42,11 +42,100 @@
     ]
   },
   {
-<<<<<<< HEAD
     "ContainingType": "monk_mode_backend.Controllers.FriendshipController",
     "Method": "GetFriends",
     "RelativePath": "api/Friendship",
-=======
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "monk_mode_backend.Controllers.FriendshipController",
+    "Method": "RemoveFriend",
+    "RelativePath": "api/Friendship/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "monk_mode_backend.Controllers.FriendshipController",
+    "Method": "AcceptFriendRequest",
+    "RelativePath": "api/Friendship/accept/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "monk_mode_backend.Controllers.FriendshipController",
+    "Method": "RejectFriendRequest",
+    "RelativePath": "api/Friendship/reject/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "monk_mode_backend.Controllers.FriendshipController",
+    "Method": "GetFriendRequests",
+    "RelativePath": "api/Friendship/requests",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "monk_mode_backend.Controllers.FriendshipController",
+    "Method": "SendFriendRequest",
+    "RelativePath": "api/Friendship/send",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "monk_mode_backend.Models.FriendRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "monk_mode_backend.Controllers.FriendshipController",
+    "Method": "GetSentFriendRequests",
+    "RelativePath": "api/Friendship/sent",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "monk_mode_backend.Controllers.TasksController",
     "Method": "CreateTask",
     "RelativePath": "api/Tasks",
@@ -66,7 +155,6 @@
     "ContainingType": "monk_mode_backend.Controllers.TasksController",
     "Method": "GetAllTasks",
     "RelativePath": "api/Tasks",
->>>>>>> main
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -74,17 +162,10 @@
     "ReturnTypes": []
   },
   {
-<<<<<<< HEAD
-    "ContainingType": "monk_mode_backend.Controllers.FriendshipController",
-    "Method": "RemoveFriend",
-    "RelativePath": "api/Friendship/{id}",
-    "HttpMethod": "DELETE",
-=======
     "ContainingType": "monk_mode_backend.Controllers.TasksController",
     "Method": "GetTaskById",
     "RelativePath": "api/Tasks/{id}",
     "HttpMethod": "GET",
->>>>>>> main
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -97,17 +178,10 @@
     "ReturnTypes": []
   },
   {
-<<<<<<< HEAD
-    "ContainingType": "monk_mode_backend.Controllers.FriendshipController",
-    "Method": "AcceptFriendRequest",
-    "RelativePath": "api/Friendship/accept/{id}",
-    "HttpMethod": "POST",
-=======
     "ContainingType": "monk_mode_backend.Controllers.TasksController",
     "Method": "UpdateTask",
     "RelativePath": "api/Tasks/{id}",
     "HttpMethod": "PUT",
->>>>>>> main
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -115,30 +189,20 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
-<<<<<<< HEAD
-=======
       },
       {
         "Name": "updateDto",
         "Type": "monk_mode_backend.Models.UpdateTaskDTO",
         "IsRequired": true
->>>>>>> main
       }
     ],
     "ReturnTypes": []
   },
   {
-<<<<<<< HEAD
-    "ContainingType": "monk_mode_backend.Controllers.FriendshipController",
-    "Method": "RejectFriendRequest",
-    "RelativePath": "api/Friendship/reject/{id}",
-    "HttpMethod": "POST",
-=======
     "ContainingType": "monk_mode_backend.Controllers.TasksController",
     "Method": "DeleteTask",
     "RelativePath": "api/Tasks/{id}",
     "HttpMethod": "DELETE",
->>>>>>> main
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -151,21 +215,6 @@
     "ReturnTypes": []
   },
   {
-<<<<<<< HEAD
-    "ContainingType": "monk_mode_backend.Controllers.FriendshipController",
-    "Method": "GetFriendRequests",
-    "RelativePath": "api/Friendship/requests",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "monk_mode_backend.Controllers.FriendshipController",
-    "Method": "SendFriendRequest",
-    "RelativePath": "api/Friendship/send",
-=======
     "ContainingType": "monk_mode_backend.Controllers.TasksController",
     "Method": "LinkTask",
     "RelativePath": "api/Tasks/{id}/link/{timeblockId}",
@@ -190,19 +239,13 @@
     "ContainingType": "monk_mode_backend.Controllers.TasksController",
     "Method": "UnlinkTask",
     "RelativePath": "api/Tasks/{id}/unlink",
->>>>>>> main
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-<<<<<<< HEAD
-        "Name": "request",
-        "Type": "monk_mode_backend.Models.FriendRequestDTO",
-=======
         "Name": "id",
         "Type": "System.Int32",
->>>>>>> main
         "IsRequired": true
       }
     ],

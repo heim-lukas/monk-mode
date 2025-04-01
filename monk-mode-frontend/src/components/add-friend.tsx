@@ -3,11 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { sendFriendRequest } from "@/services";
 
-interface AddFriendProps {
-  onFriendRequestSent: () => void;
-}
-
-export function AddFriend({ onFriendRequestSent }: AddFriendProps) {
+export function AddFriend() {
   const [username, setUsername] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
@@ -23,7 +19,6 @@ export function AddFriend({ onFriendRequestSent }: AddFriendProps) {
       const response = await sendFriendRequest(username);
       setSuccess(response.message);
       setUsername("");
-      onFriendRequestSent();
     } catch (err) {
       if (err instanceof Error) {
         setError(err.message);

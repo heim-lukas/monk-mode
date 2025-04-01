@@ -237,5 +237,26 @@ namespace monk_mode_backend.Application
 
             return true;
         }
+
+        public async Task<IEnumerable<FriendshipDTO>> GetSentFriendRequestsAsync(string userId)
+        {
+            var sentRequests = await _dbContext.Friendships
+                .Where(f => f.UserId == userId && f.Status == "Pending")
+                .ToListAsync();
+
+            var friendshipDTOs = new List<FriendshipDTO>();
+
+            foreach (var request in sentRequests)
+            {
+                var recipient = await _userManager.FindByIdAsync(request.FriendId);
+
+                var friendshipDTO = _mapper.Map<FriendshipDTO>(request);
+                friendshipDTO.FriendUsername = recipient.UserName;
+
+                friendshipDTOs.Add(friendshipDTO);
+            }
+
+            return friendshipDTOs;
+        }
     }
 }
