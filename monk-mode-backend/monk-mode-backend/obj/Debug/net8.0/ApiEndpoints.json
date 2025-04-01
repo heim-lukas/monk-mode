@@ -32,11 +32,7 @@
     "ReturnTypes": [
       {
         "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
+        "MediaTypes": ["text/plain", "application/json", "text/json"],
         "StatusCode": 400
       }
     ]
@@ -123,16 +119,6 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "monk_mode_backend.Controllers.FriendshipController",
-    "Method": "GetSentFriendRequests",
-    "RelativePath": "api/Friendship/sent",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
     "ReturnTypes": []
   },
   {

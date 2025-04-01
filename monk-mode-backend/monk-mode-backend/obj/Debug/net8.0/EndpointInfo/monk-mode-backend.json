@@ -7,9 +7,7 @@
   "paths": {
     "/api/Authenticate/login": {
       "post": {
-        "tags": [
-          "Authenticate"
-        ],
+        "tags": ["Authenticate"],
         "requestBody": {
           "content": {
             "application/json": {
@@ -38,9 +36,7 @@
     },
     "/api/Authenticate/register": {
       "post": {
-        "tags": [
-          "Authenticate"
-        ],
+        "tags": ["Authenticate"],
         "requestBody": {
           "content": {
             "application/json": {
@@ -86,9 +82,7 @@
     },
     "/api/Friendship": {
       "get": {
-        "tags": [
-          "Friendship"
-        ],
+        "tags": ["Friendship"],
         "responses": {
           "200": {
             "description": "OK"
@@ -98,9 +92,7 @@
     },
     "/api/Friendship/requests": {
       "get": {
-        "tags": [
-          "Friendship"
-        ],
+        "tags": ["Friendship"],
         "responses": {
           "200": {
             "description": "OK"
@@ -110,9 +102,7 @@
     },
     "/api/Friendship/send": {
       "post": {
-        "tags": [
-          "Friendship"
-        ],
+        "tags": ["Friendship"],
         "requestBody": {
           "content": {
             "application/json": {
@@ -141,9 +131,7 @@
     },
     "/api/Friendship/accept/{id}": {
       "post": {
-        "tags": [
-          "Friendship"
-        ],
+        "tags": ["Friendship"],
         "parameters": [
           {
             "name": "id",
@@ -164,9 +152,7 @@
     },
     "/api/Friendship/reject/{id}": {
       "post": {
-        "tags": [
-          "Friendship"
-        ],
+        "tags": ["Friendship"],
         "parameters": [
           {
             "name": "id",
@@ -187,9 +173,7 @@
     },
     "/api/Friendship/{id}": {
       "delete": {
-        "tags": [
-          "Friendship"
-        ],
+        "tags": ["Friendship"],
         "parameters": [
           {
             "name": "id",
@@ -208,23 +192,9 @@
         }
       }
     },
-    "/api/Friendship/sent": {
-      "get": {
-        "tags": [
-          "Friendship"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/Tasks": {
       "post": {
-        "tags": [
-          "Tasks"
-        ],
+        "tags": ["Tasks"],
         "requestBody": {
           "content": {
             "application/json": {
@@ -251,9 +221,7 @@
         }
       },
       "get": {
-        "tags": [
-          "Tasks"
-        ],
+        "tags": ["Tasks"],
         "responses": {
           "200": {
             "description": "OK"
@@ -263,9 +231,7 @@
     },
     "/api/Tasks/{id}": {
       "get": {
-        "tags": [
-          "Tasks"
-        ],
+        "tags": ["Tasks"],
         "parameters": [
           {
             "name": "id",
@@ -284,9 +250,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Tasks"
-        ],
+        "tags": ["Tasks"],
         "parameters": [
           {
             "name": "id",
@@ -324,9 +288,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "Tasks"
-        ],
+        "tags": ["Tasks"],
         "parameters": [
           {
             "name": "id",
@@ -347,9 +309,7 @@
     },
     "/api/Tasks/{id}/link/{timeblockId}": {
       "post": {
-        "tags": [
-          "Tasks"
-        ],
+        "tags": ["Tasks"],
         "parameters": [
           {
             "name": "id",
@@ -379,9 +339,7 @@
     },
     "/api/Tasks/{id}/unlink": {
       "post": {
-        "tags": [
-          "Tasks"
-        ],
+        "tags": ["Tasks"],
         "parameters": [
           {
             "name": "id",
@@ -402,9 +360,7 @@
     },
     "/api/TimeBlock": {
       "post": {
-        "tags": [
-          "TimeBlock"
-        ],
+        "tags": ["TimeBlock"],
         "requestBody": {
           "content": {
             "application/json": {
@@ -431,9 +387,7 @@
         }
       },
       "get": {
-        "tags": [
-          "TimeBlock"
-        ],
+        "tags": ["TimeBlock"],
         "responses": {
           "200": {
             "description": "OK"
@@ -443,9 +397,7 @@
     },
     "/api/TimeBlock/{id}": {
       "get": {
-        "tags": [
-          "TimeBlock"
-        ],
+        "tags": ["TimeBlock"],
         "parameters": [
           {
             "name": "id",
@@ -464,9 +416,7 @@
         }
       },
       "put": {
-        "tags": [
-          "TimeBlock"
-        ],
+        "tags": ["TimeBlock"],
         "parameters": [
           {
             "name": "id",
@@ -504,9 +454,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "TimeBlock"
-        ],
+        "tags": ["TimeBlock"],
         "parameters": [
           {
             "name": "id",
@@ -527,9 +475,7 @@
     },
     "/api/User/profile": {
       "get": {
-        "tags": [
-          "User"
-        ],
+        "tags": ["User"],
         "responses": {
           "200": {
             "description": "OK"
@@ -570,10 +516,7 @@
         "additionalProperties": false
       },
       "LoginDTO": {
-        "required": [
-          "password",
-          "username"
-        ],
+        "required": ["password", "username"],
         "type": "object",
         "properties": {
           "username": {
@@ -612,14 +555,10 @@
             "nullable": true
           }
         },
-        "additionalProperties": { }
+        "additionalProperties": {}
       },
       "RegisterDTO": {
-        "required": [
-          "email",
-          "password",
-          "username"
-        ],
+        "required": ["email", "password", "username"],
         "type": "object",
         "properties": {
           "username": {
@@ -700,7 +639,7 @@
   },
   "security": [
     {
-      "Bearer": [ ]
+      "Bearer": []
     }
   ]
 }

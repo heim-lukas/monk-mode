@@ -1,9 +1,7 @@
 import { API_BASE_URL } from "@/config/api";
 
-/**
- * Typ für eine Task, so wie sie vom Backend geliefert wird.
- * Du kannst das anpassen, falls dein Backend andere Felder hat.
- */
+// Type for a task as returned by the backend.
+// Adjust if your backend returns different fields.
 export interface Task {
   id: number;
   title: string;
@@ -14,18 +12,14 @@ export interface Task {
   completedAt?: string;
 }
 
-/**
- * Daten, die beim Erstellen einer Task vom Frontend ans Backend gesendet werden.
- */
+// Data sent from the frontend when creating a task.
 export interface CreateTaskDTO {
   title: string;
   description?: string;
   dueDate?: string;
 }
 
-/**
- * Holt alle Tasks des eingeloggten Nutzers vom Backend.
- */
+// Fetch all tasks for the logged-in user.
 export async function getAllTasks(): Promise<Task[]> {
   const token = localStorage.getItem("token");
 
@@ -43,9 +37,25 @@ export async function getAllTasks(): Promise<Task[]> {
   return response.json();
 }
 
-/**
- * Erstellt eine neue Task.
- */
+// Fetch all incomplete tasks for the logged-in user.
+export async function getIncompleteTasks(): Promise<Task[]> {
+  const token = localStorage.getItem("token");
+
+  const response = await fetch(`${API_BASE_URL}/tasks/incomplete`, {
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch incomplete tasks.");
+  }
+
+  return response.json();
+}
+
+// Create a new task.
 export async function createTask(data: CreateTaskDTO): Promise<Task> {
   const token = localStorage.getItem("token");
 
@@ -65,9 +75,7 @@ export async function createTask(data: CreateTaskDTO): Promise<Task> {
   return response.json();
 }
 
-/**
- * Aktualisiert eine bestehende Task, z.B. um isCompleted oder andere Felder zu ändern.
- */
+// Update an existing task (e.g., toggle isCompleted or update other fields).
 export async function updateTask(
   taskId: number,
   updateData: Partial<Task>
@@ -88,9 +96,7 @@ export async function updateTask(
   }
 }
 
-/**
- * Löscht eine Task.
- */
+// Delete a task.
 export async function deleteTask(taskId: number): Promise<void> {
   const token = localStorage.getItem("token");
 

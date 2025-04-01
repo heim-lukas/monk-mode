@@ -1,29 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\monk-mode-backend.csproj": {}
+    "C:\\Users\\David\\Documents\\GitHub\\monk-mode\\monk-mode-backend\\monk-mode-backend\\monk-mode-backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\monk-mode-backend.csproj": {
+    "C:\\Users\\David\\Documents\\GitHub\\monk-mode\\monk-mode-backend\\monk-mode-backend\\monk-mode-backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\monk-mode-backend.csproj",
+        "projectUniqueName": "C:\\Users\\David\\Documents\\GitHub\\monk-mode\\monk-mode-backend\\monk-mode-backend\\monk-mode-backend.csproj",
         "projectName": "monk-mode-backend",
-        "projectPath": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\monk-mode-backend.csproj",
-        "packagesPath": "C:\\Users\\brian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\brian\\Documents\\monk-mode\\monk-mode-backend\\monk-mode-backend\\obj\\",
+        "projectPath": "C:\\Users\\David\\Documents\\GitHub\\monk-mode\\monk-mode-backend\\monk-mode-backend\\monk-mode-backend.csproj",
+        "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\David\\Documents\\GitHub\\monk-mode\\monk-mode-backend\\monk-mode-backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\brian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\David\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
+        "originalTargetFrameworks": ["net8.0"],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
@@ -35,16 +33,14 @@
           }
         },
         "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
+          "warnAsError": ["NU1605"]
         },
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -112,7 +108,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

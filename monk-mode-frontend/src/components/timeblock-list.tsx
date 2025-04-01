@@ -11,21 +11,19 @@ import {
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Pencil, Trash2, Plus } from "lucide-react";
-import {
-  deleteTimeBlock,
-  getTimeBlocks,
-  createTimeBlock,
-  updateTimeBlock,
-} from "@/services/timeblocks";
+import { deleteTimeBlock, getTimeBlocks } from "@/services/timeblocks";
 import { ConfirmDialog } from "./confirm-dialog";
-import { TimeBlockDataDialog } from "./timeblock-data-dialog";
+
 import { TimeBlock } from "@/types/types";
+import { AddTimeBlockDialog } from "./add-timeblock-dialog";
+import { EditTimeBlockDialog } from "./edit-timeblock-dialog";
 
 export function TimeblockList() {
   const [timeBlocks, setTimeBlocks] = useState<TimeBlock[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [confirmDialogOpen, setConfirmDialogOpen] = useState(false);
+  const [addDialogOpen, setAddDialogOpen] = useState(false);
   const [editDialogOpen, setEditDialogOpen] = useState(false);
   const [selectedTimeBlock, setSelectedTimeBlock] = useState<TimeBlock | null>(
     null
@@ -91,33 +89,21 @@ export function TimeblockList() {
   };
 
   const handleAddNew = () => {
-    setSelectedTimeBlock(null); // Ensure a new block starts as null
-    setEditDialogOpen(true);
+    setAddDialogOpen(true);
   };
 
-  const handleSave = async (updatedBlock: TimeBlock) => {
-    const token = localStorage.getItem("token");
-    if (!token) {
-      setError("Authentication token not found.");
-      return;
-    }
+  const handleAddSave = async (newBlock: TimeBlock) => {
+    setTimeBlocks([...timeBlocks, newBlock]); // Update UI
+    await fetchTimeBlocks(); // Refresh data
+    setAddDialogOpen(false);
+  };
 
-    try {
-      if (!updatedBlock.id) {
-        // Create new time block
-        await createTimeBlock(token, updatedBlock);
-      } else {
-        // Update existing time block
-        await updateTimeBlock(token, updatedBlock);
-      }
-
-      await fetchTimeBlocks(); // 🔥 Ensure the list refreshes correctly
-      setEditDialogOpen(false);
-    } catch (err) {
-      setError(
-        err instanceof Error ? err.message : "Failed to save time block."
-      );
-    }
+  const handleEditSave = async (updatedBlock: TimeBlock) => {
+    setTimeBlocks(
+      timeBlocks.map((tb) => (tb.id === updatedBlock.id ? updatedBlock : tb))
+    ); // Update UI
+    await fetchTimeBlocks(); // Refresh data
+    setEditDialogOpen(false);
   };
 
   return (
@@ -208,13 +194,22 @@ export function TimeblockList() {
         cancelText="Cancel"
       />
 
-      {/* Reused Edit Dialog for Editing & Adding */}
-      <TimeBlockDataDialog
-        open={editDialogOpen}
-        onClose={() => setEditDialogOpen(false)}
-        onSave={handleSave}
-        timeBlock={selectedTimeBlock}
+      {/* Add Dialog */}
+      <AddTimeBlockDialog
+        open={addDialogOpen}
+        onClose={() => setAddDialogOpen(false)}
+        onSave={handleAddSave}
       />
+
+      {/* Edit Dialog */}
+      {selectedTimeBlock && (
+        <EditTimeBlockDialog
+          open={editDialogOpen}
+          onClose={() => setEditDialogOpen(false)}
+          onSave={handleEditSave}
+          timeBlock={selectedTimeBlock}
+        />
+      )}
     </div>
   );
 }
