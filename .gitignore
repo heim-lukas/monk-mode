@@ -1,36 +1,23 @@
-# Ignore appsettings.json and other config files
+# Ignore configuration files
 appsettings.json
 appsettings.*.json
-monk-mode-backend/.vs/monk-mode-backend/DesignTimeBuild/.dtbcache.v2
-monk-mode-backend/.vs/monk-mode-backend/FileContentIndex/4efd4d93-cf39-494b-8b77-47315b0c14e1.vsidx
-monk-mode-backend/.vs/monk-mode-backend/FileContentIndex/848263f4-5b34-4d08-a49c-18587190c2b4.vsidx
-monk-mode-backend/.vs/monk-mode-backend/FileContentIndex/d65df5ea-e757-44a9-9888-9ab660c72a24.vsidx
-monk-mode-backend/.vs/monk-mode-backend/FileContentIndex/da444d87-77b7-4f1e-9889-536c7d97d45d.vsidx
-monk-mode-backend/.vs/monk-mode-backend/FileContentIndex/eae96d55-5cc9-4b7f-8f7b-87fa8c156941.vsidx
-monk-mode-backend/.vs/monk-mode-backend/v17/.futdcache.v2
-monk-mode-backend/.vs/monk-mode-backend/v17/.suo
-monk-mode-backend/.vs/monk-mode-backend/v17/DocumentLayout.json
-monk-mode-backend/.vs/ProjectEvaluation/monk-mode-backend.metadata.v7.bin
-monk-mode-backend/.vs/ProjectEvaluation/monk-mode-backend.projects.v7.bin
-monk-mode-backend/monk-mode-backend/bin/Debug/net8.0/monk-mode-backend.dll
-monk-mode-backend/monk-mode-backend/bin/Debug/net8.0/monk-mode-backend.exe
-monk-mode-backend/monk-mode-backend/bin/Debug/net8.0/monk-mode-backend.pdb
-monk-mode-backend/monk-mode-backend/obj/monk-mode-backend.csproj.nuget.dgspec.json
-monk-mode-backend/monk-mode-backend/obj/monk-mode-backend.csproj.nuget.g.props
-monk-mode-backend/monk-mode-backend/obj/project.assets.json
-monk-mode-backend/monk-mode-backend/obj/project.nuget.cache
-monk-mode-backend/monk-mode-backend/obj/Debug/net8.0/ApiEndpoints.json
-monk-mode-backend/monk-mode-backend/obj/Debug/net8.0/apphost.exe
-monk-mode-backend/monk-mode-backend/obj/Debug/net8.0/monk-mode-backend.AssemblyInfo.cs
-monk-mode-backend/monk-mode-backend/obj/Debug/net8.0/monk-mode-backend.AssemblyInfoInputs.cache
-monk-mode-backend/monk-mode-backend/obj/Debug/net8.0/monk-mode-backend.csproj.AssemblyReference.cache
-monk-mode-backend/monk-mode-backend/obj/Debug/net8.0/monk-mode-backend.dll
-monk-mode-backend/monk-mode-backend/obj/Debug/net8.0/monk-mode-backend.GeneratedMSBuildEditorConfig.editorconfig
-monk-mode-backend/monk-mode-backend/obj/Debug/net8.0/monk-mode-backend.genruntimeconfig.cache
-monk-mode-backend/monk-mode-backend/obj/Debug/net8.0/monk-mode-backend.MvcApplicationPartsAssemblyInfo.cs
-monk-mode-backend/monk-mode-backend/obj/Debug/net8.0/monk-mode-backend.pdb
-monk-mode-backend/monk-mode-backend/obj/Debug/net8.0/monk-mode-backend.sourcelink.json
-monk-mode-backend/monk-mode-backend/obj/Debug/net8.0/staticwebassets.build.json
-monk-mode-backend/monk-mode-backend/obj/Debug/net8.0/ref/monk-mode-backend.dll
-monk-mode-backend/monk-mode-backend/obj/Debug/net8.0/refint/monk-mode-backend.dll
-monk-mode-backend/monk-mode-backend/obj/Debug/net8.0/staticwebassets/msbuild.build.monk-mode-backend.props
+
+# Ignore Visual Studio specific files
+.vs/
+
+# Ignore build output
+**/bin/
+**/obj/
+
+# Ignore user-specific and cache files
+*.suo
+*.vscode/
+*.cache
+*.idx
+*.futdcache.v2
+
+# Ignore NuGet-related files
+project.assets.json
+project.nuget.cache
+*.nuget.g.props
+*.nuget.dgspec.json
