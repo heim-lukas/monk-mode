@@ -1,16 +1,5 @@
 import { API_BASE_URL } from "@/config/api";
-
-// Type for a task as returned by the backend.
-// Adjust if your backend returns different fields.
-export interface Task {
-  id: number;
-  title: string;
-  description?: string;
-  dueDate?: string;
-  isCompleted: boolean;
-  createdAt: string;
-  completedAt?: string;
-}
+import { Task } from "@/types/types";
 
 // Data sent from the frontend when creating a task.
 export interface CreateTaskDTO {
@@ -23,7 +12,7 @@ export interface CreateTaskDTO {
 export async function getAllTasks(): Promise<Task[]> {
   const token = localStorage.getItem("token");
 
-  const response = await fetch(`${API_BASE_URL}api/tasks`, {
+  const response = await fetch(`${API_BASE_URL}/api/tasks`, {
     method: "GET",
     headers: {
       Authorization: `Bearer ${token}`,
@@ -41,7 +30,7 @@ export async function getAllTasks(): Promise<Task[]> {
 export async function getIncompleteTasks(): Promise<Task[]> {
   const token = localStorage.getItem("token");
 
-  const response = await fetch(`${API_BASE_URL}/tasks/incomplete`, {
+  const response = await fetch(`${API_BASE_URL}/api/tasks/incomplete`, {
     method: "GET",
     headers: {
       Authorization: `Bearer ${token}`,
@@ -59,7 +48,7 @@ export async function getIncompleteTasks(): Promise<Task[]> {
 export async function createTask(data: CreateTaskDTO): Promise<Task> {
   const token = localStorage.getItem("token");
 
-  const response = await fetch(`${API_BASE_URL}api/tasks`, {
+  const response = await fetch(`${API_BASE_URL}/api/tasks`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -82,7 +71,7 @@ export async function updateTask(
 ): Promise<void> {
   const token = localStorage.getItem("token");
 
-  const response = await fetch(`${API_BASE_URL}api/tasks/${taskId}`, {
+  const response = await fetch(`${API_BASE_URL}/api/tasks/${taskId}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -100,7 +89,7 @@ export async function updateTask(
 export async function deleteTask(taskId: number): Promise<void> {
   const token = localStorage.getItem("token");
 
-  const response = await fetch(`${API_BASE_URL}api/tasks/${taskId}`, {
+  const response = await fetch(`${API_BASE_URL}/api/tasks/${taskId}`, {
     method: "DELETE",
     headers: {
       Authorization: `Bearer ${token}`,

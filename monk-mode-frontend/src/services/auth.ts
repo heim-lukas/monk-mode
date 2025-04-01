@@ -22,7 +22,7 @@ interface ErrorResponse {
 
 export async function login(credentials: LoginRequest): Promise<LoginResponse> {
   try {
-    const response = await fetch(`${API_BASE_URL}api/Authenticate/login`, {
+    const response = await fetch(`${API_BASE_URL}/api/Authenticate/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -46,7 +46,7 @@ export async function login(credentials: LoginRequest): Promise<LoginResponse> {
 
 export async function register(data: RegisterRequest): Promise<LoginResponse> {
   try {
-    const response = await fetch(`${API_BASE_URL}api/Authenticate/register`, {
+    const response = await fetch(`${API_BASE_URL}/api/Authenticate/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

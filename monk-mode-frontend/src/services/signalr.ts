@@ -3,14 +3,14 @@ import { API_BASE_URL } from "@/config/api";
 
 class SignalRService {
   public hubConnection: signalR.HubConnection | null = null;
-  
+
   public async startConnection(): Promise<void> {
     if (this.hubConnection) {
       if (this.hubConnection.state === signalR.HubConnectionState.Connected) {
         console.log("SignalR already connected");
         return;
       }
-      
+
       try {
         await this.hubConnection.stop();
         console.log("Stopped existing SignalR connection");
@@ -26,7 +26,7 @@ class SignalRService {
 
     // Create a new connection
     this.hubConnection = new signalR.HubConnectionBuilder()
-      .withUrl(`${API_BASE_URL}hubs/notifications?access_token=${token}`)
+      .withUrl(`${API_BASE_URL}/hubs/notifications?access_token=${token}`)
       .withAutomaticReconnect()
       .build();
 

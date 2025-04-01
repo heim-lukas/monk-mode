@@ -1,10 +1,5 @@
 import { API_BASE_URL } from "@/config/api";
-
-export interface UserProfile {
-  id: string;
-  username: string;
-  email: string;
-}
+import { UserProfile } from "@/types/types";
 
 export async function getUserProfile(): Promise<UserProfile> {
   const token = localStorage.getItem("token");
@@ -13,7 +8,7 @@ export async function getUserProfile(): Promise<UserProfile> {
   }
 
   try {
-    const response = await fetch(`${API_BASE_URL}api/User/profile`, {
+    const response = await fetch(`${API_BASE_URL}/api/User/profile`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
